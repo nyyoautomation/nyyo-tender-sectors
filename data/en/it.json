@@ -3,67 +3,67 @@
  "name": "IT",
  "icon": "server",
  "h1": "managed services and support, proposal ready to review",
- "lead": "Service desk, response / resolution times, GDPR, security assurance plan, reversibility: every requirement linked to its clause.",
+ "lead": "Service desk, response / resolution times, data protection, security assurance plan, reversibility: every requirement linked to its clause.",
  "meta": {
-  "tender_id": "SIVB-2026-INFO-02",
+  "tender_id": "LSA-2026-ITS-02",
   "title": "Managed IT services, user support and maintenance of the IT estate (450 workstations, 9 sites)",
-  "buyer": "Val-Brumeux inter-municipal digital syndicate (fictional)",
+  "buyer": "Lakeside Shared Services Authority (fictional)",
   "procedure": "Open procedure — single-supplier framework agreement",
-  "cpv": "72253000 — Helpdesk and support services",
+  "cpv": "Helpdesk and support services",
   "term": "4 years",
   "source_files": [
    {
-    "name": "RC.pdf",
-    "type": "Rules (RC)",
+    "name": "ITT_Instructions.pdf",
+    "type": "Instructions to tenderers",
     "pages": 18
    },
    {
-    "name": "CCAP.pdf",
-    "type": "Admin terms (CCAP)",
+    "name": "Contract_Terms.pdf",
+    "type": "Contract terms",
     "pages": 26
    },
    {
-    "name": "CCTP.pdf",
-    "type": "Tech. specs (CCTP)",
+    "name": "Specification.pdf",
+    "type": "Specification",
     "pages": 44
    },
    {
-    "name": "Annexe_RGPD.pdf",
-    "type": "GDPR appendix",
+    "name": "Data_Protection_Annex.pdf",
+    "type": "Data-protection annex",
     "pages": 6
    },
    {
-    "name": "Cadre_memoire.docx",
+    "name": "Response_Template.docx",
     "type": "Imposed template",
     "pages": 4
    },
    {
-    "name": "BPU.xlsx",
-    "type": "BPU",
+    "name": "Rate_Card.xlsx",
+    "type": "Rate card",
     "pages": 3
    },
    {
-    "name": "DQE.xlsx",
-    "type": "DQE",
+    "name": "Pricing_Schedule.xlsx",
+    "type": "Pricing schedule",
     "pages": 2
    }
   ]
  },
  "fly": [
-  "RC.pdf",
-  "CCTP.pdf",
-  "GDPR_appendix.pdf",
-  "BPU.xlsx"
+  "ITT_Instructions.pdf",
+  "Specification.pdf",
+  "Data_Protection_Annex.pdf",
+  "Rate_Card.xlsx"
  ],
- "pieces": "RC · CCAP · CCTP · GDPR appendix · BPU · DQE",
+ "pieces": "ITT · contract terms · specification · data-protection annex · rate card · pricing schedule",
  "cadre": {
-  "name": "Imposed proposal template (RC appendix 1)",
+  "name": "Imposed proposal template (ITT appendix 1)",
   "note": "5 sections kept in the buyer's order."
  },
  "value": {
   "rows": [
    [
-    "Reading the tender pack (44-page CCTP + GDPR appendix)",
+    "Reading the tender pack (44-page specification + data-protection annex)",
     "≈ 8 h",
     "≈ 1 h 30 of review"
    ],
@@ -73,7 +73,7 @@
     "≈ 4 h of review and edits"
    ],
    [
-    "Checking documents (PAS, GDPR, DC1, DC2…)",
+    "Checking documents (security plan, data protection, compliance forms…)",
     "≈ 3 h",
     "≈ 30 min"
    ]
@@ -86,24 +86,24 @@
  "deadlines": [
   {
    "label": "Questions deadline",
-   "date": "16/11/2026",
+   "date": "16 Nov 2026",
    "time": "12:00",
-   "tz": "local time"
+   "tz": "buyer's local time"
   },
   {
    "label": "Bid deadline",
-   "date": "01/12/2026",
+   "date": "1 Dec 2026",
    "time": "12:00",
-   "tz": "local time"
+   "tz": "buyer's local time"
   },
   {
    "label": "Bid validity",
-   "date": "30/05/2027",
+   "date": "30 May 2027",
    "note": "180 days"
   },
   {
    "label": "Planned start",
-   "date": "01/04/2027",
+   "date": "1 Apr 2027",
    "note": "Indicative"
   }
  ],
@@ -116,9 +116,9 @@
   },
   {
    "id": "C2",
-   "name": "Security, GDPR and hosting",
+   "name": "Security, data protection and hosting",
    "weight": 20,
-   "description": "Security assurance plan, GDPR article 28, EU data, remote access."
+   "description": "Security assurance plan, data-processing agreement, data residency, remote access."
   },
   {
    "id": "C3",
@@ -136,7 +136,7 @@
    "id": "C5",
    "name": "Price",
    "weight": 35,
-   "description": "BPU (flat fee + work units) and DQE simulation."
+   "description": "Rate card (flat fee + work units) and pricing-schedule simulation."
   }
  ],
  "requirements": [
@@ -144,7 +144,7 @@
    "id": "E01",
    "category": "Support",
    "text": "Service desk reachable 7:30–19:00 on working days, by phone, email and portal.",
-   "source": "CCTP.pdf",
+   "source": "Specification.pdf",
    "page": 8,
    "art": "Art. 3.1",
    "criterion": "C1",
@@ -154,19 +154,19 @@
   {
    "id": "E02",
    "category": "Service levels",
-   "text": "Blocking incidents (P1): guaranteed response time (GTI) of 4 working hours maximum and guaranteed resolution time (GTR) of 8 working hours.",
-   "source": "CCTP.pdf",
+   "text": "Blocking incidents (P1): guaranteed response time of 4 working hours maximum and guaranteed resolution time of 8 working hours.",
+   "source": "Specification.pdf",
    "page": 12,
    "art": "Art. 4.2",
    "criterion": "C1",
    "kb": "kb-memo-1",
-   "check": "gti"
+   "check": "resp"
   },
   {
    "id": "E03",
    "category": "Reporting",
    "text": "Monthly service-level dashboard and quarterly steering committee.",
-   "source": "CCTP.pdf",
+   "source": "Specification.pdf",
    "page": 15,
    "art": "Art. 5",
    "criterion": "C1",
@@ -177,7 +177,7 @@
    "id": "E04",
    "category": "Processes",
    "text": "ITIL or equivalent approach for incidents, requests and changes.",
-   "source": "CCTP.pdf",
+   "source": "Specification.pdf",
    "page": 10,
    "art": "Art. 3.5",
    "criterion": "C1",
@@ -187,8 +187,8 @@
   {
    "id": "E05",
    "category": "Hosting",
-   "text": "Data hosted in the European Union; no transfer outside the EU without written consent.",
-   "source": "Annexe_RGPD.pdf",
+   "text": "Data hosted in the data region chosen by the buyer (EU or US); no transfer outside it without written consent.",
+   "source": "Data_Protection_Annex.pdf",
    "page": 2,
    "art": "Art. 2",
    "criterion": "C2",
@@ -197,31 +197,31 @@
   },
   {
    "id": "E06",
-   "category": "GDPR",
-   "text": "Data-processing agreement compliant with GDPR article 28, signed at award.",
-   "source": "Annexe_RGPD.pdf",
+   "category": "data protection",
+   "text": "Data-processing agreement (DPA) compliant with applicable data-protection law, signed at award.",
+   "source": "Data_Protection_Annex.pdf",
    "page": 3,
    "art": "Art. 3",
    "criterion": "C2",
-   "kb": "kb-rgpd",
+   "kb": "kb-dpa",
    "check": null
   },
   {
    "id": "E07",
    "category": "Security",
-   "text": "Security assurance plan (PAS) submitted with the bid: access management, logging, security patches within 30 days.",
-   "source": "CCTP.pdf",
+   "text": "Security assurance plan submitted with the bid: access management, logging, security patches within 30 days.",
+   "source": "Specification.pdf",
    "page": 21,
    "art": "Art. 8.1",
    "criterion": "C2",
-   "kb": "kb-pas",
+   "kb": "kb-secplan",
    "check": null
   },
   {
    "id": "E08",
    "category": "Remote access",
    "text": "Remote control of workstations only with the user's consent and a trace of every session.",
-   "source": "CCTP.pdf",
+   "source": "Specification.pdf",
    "page": 23,
    "art": "Art. 8.4",
    "criterion": "C2",
@@ -232,7 +232,7 @@
    "id": "E09",
    "category": "Team",
    "text": "Dedicated project manager with at least 5 years of public-sector managed-services experience.",
-   "source": "RC.pdf",
+   "source": "ITT_Instructions.pdf",
    "page": 8,
    "art": "Art. 6.2",
    "criterion": "C3",
@@ -243,7 +243,7 @@
    "id": "E10",
    "category": "Transition",
    "text": "Transition phase of 2 months maximum, with a joint inventory of the estate.",
-   "source": "CCTP.pdf",
+   "source": "Specification.pdf",
    "page": 30,
    "art": "Art. 11",
    "criterion": "C4",
@@ -254,7 +254,7 @@
    "id": "E11",
    "category": "Reversibility",
    "text": "Exit reversibility plan: data and documentation returned in an open format.",
-   "source": "CCTP.pdf",
+   "source": "Specification.pdf",
    "page": 33,
    "art": "Art. 12",
    "criterion": "C4",
@@ -265,7 +265,7 @@
    "id": "E12",
    "category": "Reuse",
    "text": "Refurbishment of replaced workstations and data-destruction certificate.",
-   "source": "CCTP.pdf",
+   "source": "Specification.pdf",
    "page": 36,
    "art": "Art. 13",
    "criterion": "C4",
@@ -275,8 +275,8 @@
   {
    "id": "E13",
    "category": "Price",
-   "text": "BPU: monthly support fee and work units (workstation install, site call-out); DQE simulation completed without changing quantities.",
-   "source": "RC.pdf",
+   "text": "Rate card: monthly support fee and work units (workstation install, site call-out); pricing-schedule simulation completed without changing quantities.",
+   "source": "ITT_Instructions.pdf",
    "page": 10,
    "art": "Art. 8",
    "criterion": "C5",
@@ -287,31 +287,31 @@
  "required_documents": [
   {
    "id": "D1",
-   "name": "DC1 — Application letter",
+   "name": "Compliance forms — bidder declaration",
    "mandatory": true,
-   "notes": "Official form, signed; or DUME",
+   "notes": "Signed; or the standard qualification questionnaire",
    "kind": "form",
    "alt": false
   },
   {
    "id": "D2",
-   "name": "DC2 — Bidder declaration",
+   "name": "Capability statement (financial, technical, professional)",
    "mandatory": true,
-   "notes": "Financial, technical and professional capacity; or DUME",
+   "notes": "Or the standard qualification questionnaire",
    "kind": "form",
    "alt": false
   },
   {
    "id": "D3",
-   "name": "DUME — European Single Procurement Document (ESPD)",
+   "name": "Standard qualification questionnaire",
    "mandatory": false,
-   "notes": "Accepted instead of DC1 + DC2",
+   "notes": "Accepted instead of the two forms above",
    "kind": "form",
    "alt": true
   },
   {
    "id": "D4",
-   "name": "DC4 — Subcontracting declaration",
+   "name": "Subcontractor declaration form",
    "mandatory": false,
    "notes": "If hardware maintenance is subcontracted",
    "kind": "form",
@@ -327,7 +327,7 @@
   },
   {
    "id": "D6",
-   "name": "Completed BPU",
+   "name": "Completed rate card",
    "mandatory": true,
    "notes": "Monthly fee + work units",
    "kind": "price",
@@ -335,7 +335,7 @@
   },
   {
    "id": "D7",
-   "name": "Completed DQE",
+   "name": "Completed pricing schedule",
    "mandatory": true,
    "notes": "Quantities unchanged",
    "kind": "price",
@@ -343,7 +343,7 @@
   },
   {
    "id": "D8",
-   "name": "Acte d'engagement (AE) — tender form",
+   "name": "Bid submission form (form of tender)",
    "mandatory": true,
    "notes": "Signed",
    "kind": "form",
@@ -351,7 +351,7 @@
   },
   {
    "id": "D9",
-   "name": "Security assurance plan (PAS)",
+   "name": "Security assurance plan",
    "mandatory": true,
    "notes": "Required at submission",
    "kind": "file",
@@ -359,7 +359,7 @@
   },
   {
    "id": "D10",
-   "name": "Signed GDPR appendix (article 28)",
+   "name": "Signed data-processing agreement (DPA)",
    "mandatory": true,
    "notes": "Buyer's template",
    "kind": "file",
@@ -375,7 +375,7 @@
   },
   {
    "id": "D12",
-   "name": "Social-security (URSSAF) and tax certificates",
+   "name": "Tax and social-contribution compliance certificates",
    "mandatory": true,
    "notes": "Less than 6 months old",
    "kind": "file",
@@ -393,7 +393,7 @@
  "alerts": [
   {
    "level": "warn",
-   "text": "4 h response / 8 h resolution (working hours) on blocking incidents — scored commitment (CCTP p.12)."
+   "text": "4 h response / 8 h resolution (working hours) on blocking incidents — scored commitment (Spec p.12)."
   },
   {
    "level": "warn",
@@ -401,20 +401,20 @@
   },
   {
    "level": "info",
-   "text": "EU data hosting required (GDPR appendix p.2)."
+   "text": "Hosting in the buyer's chosen data region required (data-protection annex p.2)."
   },
   {
    "level": "info",
    "text": "Transition limited to 2 months, with a joint inventory."
   }
  ],
- "company": "Brume Numérique Services (fictional company)",
- "company_desc": "past proposals, ITIL processes, template PAS, GDPR templates, CVs",
+ "company": "Northwind Managed IT (fictional company)",
+ "company_desc": "past proposals, ITIL processes, template security plan, data protection templates, CVs",
  "chunks": [
   {
    "id": "kb-memo-1",
-   "title": "Past proposal — Port-Brumeux community of communes, 320-seat managed services (2024)",
-   "source": "memoires/infogerance_port_brumeux_2024.docx",
+   "title": "Past proposal — Port Ellis District Council, 320-seat managed services (2024)",
+   "source": "proposals/managed_it_port_ellis_2024.docx",
    "page": 5,
    "tags": [
     "service desk",
@@ -427,7 +427,7 @@
   {
    "id": "kb-sla",
    "title": "Template — Monthly SLA dashboard and steering committee",
-   "source": "pilotage/modele_tableau_bord_sla.xlsx",
+   "source": "governance/sla_dashboard_template.xlsx",
    "page": 1,
    "tags": [
     "SLA",
@@ -439,7 +439,7 @@
   {
    "id": "kb-itil",
    "title": "Process — Incidents, requests and changes (ITIL)",
-   "source": "processus/itil_incidents_changements.pdf",
+   "source": "processes/itil_incidents_changes.pdf",
    "page": 3,
    "tags": [
     "ITIL",
@@ -450,35 +450,35 @@
   },
   {
    "id": "kb-hebergement",
-   "title": "Sheet — Data and tool hosting (EU)",
-   "source": "securite/hebergement_ue.pdf",
+   "title": "Sheet — Data and tool hosting (region of your choice)",
+   "source": "security/hosting_data_region.pdf",
    "page": 1,
    "tags": [
     "hosting",
-    "European Union",
+    "data region",
     "data"
    ],
-   "text": "Ticketing tool and backups hosted in the European Union. No transfer outside the EU. List of sub-processors shared with the client."
+   "text": "Ticketing tool and backups hosted in the client's chosen data region (EU or US). No transfer outside that region. List of sub-processors shared with the client."
   },
   {
-   "id": "kb-rgpd",
-   "title": "Template — Data-processing agreement (GDPR article 28)",
-   "source": "juridique/modele_art28.docx",
+   "id": "kb-dpa",
+   "title": "Template — Data-processing agreement (DPA)",
+   "source": "legal/dpa_template.docx",
    "page": 2,
    "tags": [
-    "GDPR",
-    "article 28",
+    "data protection",
+    "DPA",
     "processor"
    ],
-   "text": "Article 28 clause template: purpose and duration of processing, security measures, sub-processors, assistance to the controller, data at end of contract."
+   "text": "DPA clause template: purpose and duration of processing, security measures, sub-processors, assistance to the controller, data at end of contract."
   },
   {
-   "id": "kb-pas",
+   "id": "kb-secplan",
    "title": "Template security assurance plan",
-   "source": "securite/pas_type.docx",
+   "source": "security/security_plan_template.docx",
    "page": 4,
    "tags": [
-    "PAS",
+    "security plan",
     "security",
     "access",
     "logging",
@@ -489,7 +489,7 @@
   {
    "id": "kb-remote",
    "title": "Procedure — Remote control with user consent",
-   "source": "procedures/prise_en_main_accord.pdf",
+   "source": "procedures/remote_control_consent.pdf",
    "page": 1,
    "tags": [
     "remote access",
@@ -500,20 +500,20 @@
   },
   {
    "id": "kb-cv-lead",
-   "title": "CV — Élodie Marchal, managed-services project manager",
-   "source": "rh/cv_elodie_marchal.pdf",
+   "title": "CV — Elena Marsh, managed-services project manager",
+   "source": "hr/cv_elena_marsh.pdf",
    "page": 1,
    "tags": [
     "project manager",
     "managed services",
     "public sector"
    ],
-   "text": "Élodie Marchal (fictional person): 9 years running managed-services contracts for local authorities, 150 to 600 seats. Chairs steering committees and transitions."
+   "text": "Elena Marsh (fictional person): 9 years running managed-services contracts for public bodies, 150 to 600 seats. Chairs steering committees and transitions."
   },
   {
    "id": "kb-transition",
    "title": "Method — 8-week transition",
-   "source": "projets/methode_prise_en_charge.pdf",
+   "source": "projects/transition_method.pdf",
    "page": 2,
    "tags": [
     "transition",
@@ -525,7 +525,7 @@
   {
    "id": "kb-reversibilite",
    "title": "Template exit reversibility plan",
-   "source": "projets/plan_reversibilite.pdf",
+   "source": "projects/exit_plan.pdf",
    "page": 1,
    "tags": [
     "reversibility",
@@ -537,7 +537,7 @@
  ],
  "chips": [
   "response time",
-  "GDPR article 28",
+  "data-processing agreement",
   "security assurance plan",
   "reversibility",
   "ITIL",
@@ -549,7 +549,7 @@
    "title": "Section 1 — Support organisation and service levels",
    "bullets": [
     {
-     "text": "Service desk reachable 7:30–19:00 on working days, by phone, email and portal, as for the Port-Brumeux community of communes.",
+     "text": "Service desk reachable 7:30–19:00 on working days, by phone, email and portal, as for the Port Ellis District Council.",
      "cite": "kb-memo-1"
     },
     {
@@ -563,15 +563,15 @@
    ]
   },
   "C2": {
-   "title": "Section 2 — Security, GDPR and hosting",
+   "title": "Section 2 — Security, data protection and hosting",
    "bullets": [
     {
-     "text": "GDPR article 28 data-processing agreement ready to sign at award.",
-     "cite": "kb-rgpd"
+     "text": "Data-processing agreement (DPA) ready to sign at award.",
+     "cite": "kb-dpa"
     },
     {
      "text": "Security assurance plan attached: named accounts with two-factor authentication, logs kept 12 months, critical patches within 15 days.",
-     "cite": "kb-pas"
+     "cite": "kb-secplan"
     },
     {
      "text": "Remote control only after user consent, each session time-stamped and linked to the ticket.",
@@ -583,7 +583,7 @@
    "title": "Section 3 — Team and skills",
    "bullets": [
     {
-     "text": "Team: 3 field technicians and 4 service-desk technicians, on the Port-Brumeux contract model.",
+     "text": "Team: 3 field technicians and 4 service-desk technicians, on the Port Ellis contract model.",
      "cite": "kb-memo-1"
     }
    ]
@@ -605,7 +605,7 @@
    "title": "Section 5 — Price",
    "bullets": [
     {
-     "text": "BPU completed (monthly fee and work units); DQE completed without changing quantities.",
+     "text": "Rate card completed (monthly fee and work units); pricing schedule completed without changing quantities.",
      "cite": null
     }
    ]
@@ -615,14 +615,14 @@
   "fields": [
    {
     "id": "price",
-    "label": "Monthly support fee (€ excl. VAT)",
+    "label": "Monthly support fee ($, excl. tax)",
     "type": "money",
     "value": 14250,
     "min": 0,
     "step": 50
    },
    {
-    "id": "gti",
+    "id": "resp",
     "label": "P1 response time offered (working h)",
     "type": "number",
     "value": 4,
@@ -631,7 +631,7 @@
     "step": 1
    },
    {
-    "id": "gtr",
+    "id": "resol",
     "label": "P1 resolution time offered (working h)",
     "type": "number",
     "value": 8,
@@ -643,11 +643,11 @@
     "id": "lead",
     "label": "Project manager",
     "type": "select",
-    "value": "Élodie Marchal",
+    "value": "Elena Marsh",
     "options": [
      [
-      "Élodie Marchal",
-      "Élodie Marchal (9 yrs)"
+      "Elena Marsh",
+      "Elena Marsh (9 yrs)"
      ],
      [
       "Other",
@@ -666,7 +666,7 @@
    },
    {
     "id": "eu",
-    "label": "Data hosted in the EU?",
+    "label": "Data hosted in the buyer's chosen region?",
     "type": "select",
     "value": "yes",
     "options": [
@@ -687,13 +687,13 @@
  "formBullets": {
   "C1": [
    {
-    "tpl": "P1 commitment: {gti} working-hour response, {gtr} working-hour resolution.",
+    "tpl": "P1 commitment: {resp} working-hour response, {resol} working-hour resolution.",
     "cite": "kb-memo-1"
    }
   ],
   "C2": [
    {
-    "tpl": "Data and tools hosted in the European Union; no transfer outside the EU.",
+    "tpl": "Data and tools hosted in the buyer's chosen data region (EU or US); no transfer outside it.",
     "when": [
      "eu",
      "yes"
@@ -707,7 +707,7 @@
     "cite": "kb-cv-lead",
     "citeIf": [
      "lead",
-     "Élodie Marchal"
+     "Elena Marsh"
     ]
    }
   ],
@@ -725,24 +725,24 @@
  },
  "checks": [
   {
-   "id": "gti",
+   "id": "resp",
    "op": "le",
-   "field": "gti",
+   "field": "resp",
    "value": 4,
    "label": "P1 response ≤ 4 working h",
-   "ref": "CCTP p.12",
-   "ok": "{gti} h response (maximum 4 h).",
-   "ko": "{gti} h response — above the 4 h required."
+   "ref": "Spec p.12",
+   "ok": "{resp} h response (maximum 4 h).",
+   "ko": "{resp} h response — above the 4 h required."
   },
   {
-   "id": "gtr",
+   "id": "resol",
    "op": "le",
-   "field": "gtr",
+   "field": "resol",
    "value": 8,
    "label": "P1 resolution ≤ 8 working h",
-   "ref": "CCTP p.12",
-   "ok": "{gtr} h resolution (maximum 8 h).",
-   "ko": "{gtr} h resolution — above the 8 h required."
+   "ref": "Spec p.12",
+   "ok": "{resol} h resolution (maximum 8 h).",
+   "ko": "{resol} h resolution — above the 8 h required."
   },
   {
    "id": "transition",
@@ -750,7 +750,7 @@
    "field": "transition",
    "value": 8,
    "label": "Transition ≤ 2 months",
-   "ref": "CCTP p.30",
+   "ref": "Spec p.30",
    "ok": "{transition} weeks (maximum 2 months).",
    "ko": "{transition} weeks — longer than the 2 months allowed."
   },
@@ -759,10 +759,10 @@
    "op": "eq",
    "field": "eu",
    "value": "yes",
-   "label": "Data in the EU",
-   "ref": "GDPR appendix p.2",
-   "ok": "EU hosting confirmed.",
-   "ko": "Hosting outside the EU — requirement not met."
+   "label": "Data in the chosen region",
+   "ref": "data-protection annex p.2",
+   "ok": "Hosting in the chosen data region confirmed.",
+   "ko": "Hosting outside the chosen data region — requirement not met."
   },
   {
    "id": "lead",
@@ -770,7 +770,7 @@
    "field": "lead",
    "value": "Other",
    "label": "Project manager named",
-   "ref": "RC p.8",
+   "ref": "ITT p.8",
    "ok": "Project manager: {lead}.",
    "ko": "Name a project manager (5 years' experience required)."
   },
@@ -779,11 +779,11 @@
    "op": "gt",
    "field": "price",
    "value": 0,
-   "label": "Fee entered in the BPU",
-   "ref": "RC p.10",
+   "label": "Fee entered in the rate card",
+   "ref": "ITT p.10",
    "ok": "Fee entered: {price}.",
    "ko": "Enter the fee."
   }
  ],
- "file": "SIVB-2026-INFO-02_technical_proposal_draft"
+ "file": "LSA-2026-ITS-02_technical_proposal_draft"
 }

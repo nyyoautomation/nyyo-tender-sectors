@@ -49,12 +49,12 @@
 
 /* Extraction */
 .tender-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 6px; }
-.dce-files { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
-.dce-file { display: grid; grid-template-columns: 22px 1fr; column-gap: 8px; align-items: center; text-align: left; padding: 9px 10px; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,.025); color: var(--text); font-family: inherit; cursor: pointer; min-width: 0; transition: border-color .2s, background .2s; }
-.dce-file:hover, .dce-file:focus-visible { border-color: rgba(61,139,255,.5); background: rgba(61,139,255,.08); outline: none; }
-.dce-file svg { width: 18px; height: 18px; color: var(--azure); grid-row: span 2; }
-.dce-file span { font-family: var(--mono); font-size: 0.72rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.dce-file small { color: var(--muted); font-size: 0.68rem; }
+.tender-files { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.tender-file { display: grid; grid-template-columns: 22px 1fr; column-gap: 8px; align-items: center; text-align: left; padding: 9px 10px; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,.025); color: var(--text); font-family: inherit; cursor: pointer; min-width: 0; transition: border-color .2s, background .2s; }
+.tender-file:hover, .tender-file:focus-visible { border-color: rgba(61,139,255,.5); background: rgba(61,139,255,.08); outline: none; }
+.tender-file svg { width: 18px; height: 18px; color: var(--azure); grid-row: span 2; }
+.tender-file span { font-family: var(--mono); font-size: 0.72rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tender-file small { color: var(--muted); font-size: 0.68rem; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
 .cadre-box, .gonogo { border-radius: 14px; padding: 12px 14px; border: 1px solid rgba(61,139,255,.35); background: rgba(61,139,255,.06); min-width: 0; }
 .gonogo { border-color: rgba(57,255,136,.35); background: rgba(57,255,136,.05); }
@@ -78,8 +78,8 @@
 .cite-btn { cursor: pointer; font-family: var(--mono); text-align: left; line-height: 1.35; }
 .cite-btn svg { width: 11px; height: 11px; flex-shrink: 0; }
 .cite-btn:hover, .cite-btn:focus-visible { background: rgba(61,139,255,.24); outline: none; border-color: rgba(61,139,255,.6); }
-.cite-dce { color: #ffe6a8; background: rgba(255,209,102,.08); border-color: rgba(255,209,102,.3); }
-.cite-dce:hover { background: rgba(255,209,102,.18); border-color: rgba(255,209,102,.55); }
+.cite-tender { color: #ffe6a8; background: rgba(255,209,102,.08); border-color: rgba(255,209,102,.3); }
+.cite-tender:hover { background: rgba(255,209,102,.18); border-color: rgba(255,209,102,.55); }
 .hit .cite-btn { margin-top: 2px; }
 
 /* Checks */
