@@ -3,7 +3,6 @@
 Live demo (static, no sign-up):
 
 - English (international): https://nyyoautomation.github.io/nyyo-tender-sectors/
-- Français (marchés publics français) : https://nyyoautomation.github.io/nyyo-tender-sectors/fr/
 
 Pick a sector: **cleaning, security, IT or training**. The page loads a fictional RFP / ITT pack and lists every requirement with its clause and page. It checks compliance forms, bid submission forms and the pricing schedule before submission, then exports a Word technical proposal in the buyer's imposed template.
 
