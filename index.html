@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cleaning, security, IT and training tenders — AI demo · Nyyo Automation</title>
+  <meta name="description" content="No sign-up demo: pick your sector (cleaning, security, IT, training), analyse a fictional public tender, check your forms (DC1, DC2, DUME, BPU, DQE) and export a Word technical proposal in the buyer's template, ready to review. Priced on quote." />
+  <meta name="theme-color" content="#050814" />
+  <link rel="canonical" href="https://nyyoautomation.github.io/nyyo-tender-sectors/" />
+  <link rel="alternate" hreflang="fr" href="https://nyyoautomation.github.io/nyyo-tender-sectors/fr/" />
+  <link rel="alternate" hreflang="en" href="https://nyyoautomation.github.io/nyyo-tender-sectors/" />
+  <link rel="alternate" hreflang="x-default" href="https://nyyoautomation.github.io/nyyo-tender-sectors/" />
+  <meta property="og:title" content="Service-sector public tenders — proposal ready to review · Nyyo Automation" />
+  <meta property="og:description" content="Cleaning, security, IT, training: fictional tender → sourced requirements → pre-submission checks → Word proposal in the buyer's template. No sign-up." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://nyyoautomation.github.io/nyyo-tender-sectors/assets/og.png" />
+  <meta property="og:url" content="https://nyyoautomation.github.io/nyyo-tender-sectors/" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/nyyo-kit.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sectors.css" />
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js" defer></script>
+  <script src="js/bm25.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-base="./data/en/">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="https://github.com/nyyoautomation" aria-label="Nyyo Automation">
+        <img src="assets/logo.png" alt="" width="34" height="34" />
+        <span class="brand-name">Nyyo Automation</span>
+      </a>
+      <div class="top-actions">
+        <a class="btn btn-ghost lang-toggle" href="fr/" hreflang="fr" lang="fr" aria-label="Version française">FR</a>
+        <a class="btn btn-primary" href="mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Service-sector%20tenders%20%E2%80%94%20quote%20request" aria-label="Contact us"><i data-lucide="mail"></i><span class="lbl">Contact us</span></a>
+      </div>
+    </div>
+
+    <header class="hero" id="hero">
+      <div class="hero-inner">
+        <span class="tag"><span class="dot"></span> Live demo · fictional tenders · no sign-up</span>
+        <h1><span id="heroSector">Cleaning</span> tenders — <span class="grad" id="heroGrad">proposal in the buyer's template, ready to review</span></h1>
+        <p class="lead">
+          Pick your sector: the demo loads a fictional public tender pack (DCE), lists every requirement with its clause and page, checks your forms (DC1, DC2, DUME, BPU / DQE) and assembles a Word technical proposal in the order the buyer imposes.
+          <span id="heroLead"></span>
+        </p>
+        <div class="sector-pick">
+          <span class="sp-label">Your sector</span>
+          <div class="sector-tabs" id="sectorTabs" role="tablist" aria-label="Choose a sector"></div>
+        </div>
+        <p class="host-line"><i data-lucide="cloud"></i><span><strong>Online first</strong>, isolated workspace, AI in Europe; local version as an option.</span></p>
+        <div class="hero-meta">
+          <span>Pricing: <strong>On quote</strong></span>
+          <span><strong>AI in Europe</strong></span>
+          <span><strong id="heroPieces">RC · CCAP · CCTP · DQE</strong></span>
+        </div>
+        <div class="disclaimer-banner" role="note">
+          <i data-lucide="shield-alert"></i>
+          <div><strong>Human review required</strong> (« relecture humaine obligatoire »). The output is a draft your team checks before any submission. You remain solely responsible for the bid you send the buyer. This page uses <em>fictional</em> documents only.</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel value-panel" id="value" aria-labelledby="valueTitle">
+      <div class="panel-head">
+        <h2 id="valueTitle"><i data-lucide="trending-up"></i> <span>What you get —&nbsp;<span id="valueSector">Cleaning</span></span></h2>
+        <span class="badge-sample">Estimate on the sample</span>
+      </div>
+      <p class="value-case">Fictional case: <span id="valueCase"></span></p>
+      <div class="value-grid">
+        <div class="value-table-wrap">
+          <table class="table value-table">
+            <thead><tr><th>Step</th><th><i data-lucide="hourglass"></i> By hand</th><th><i data-lucide="zap"></i> With the tool</th></tr></thead>
+            <tbody id="valueRows"></tbody>
+          </table>
+        </div>
+        <div class="value-stats" id="valueStats"></div>
+      </div>
+      <ul class="value-points">
+        <li><i data-lucide="list-checks"></i><span><strong>No requirement silently missed:</strong> every requirement is listed with its clause and page; anything your documents don't cover is flagged “to check”.</span></li>
+        <li><i data-lucide="file-check-2"></i><span><strong>Forms and documents checked:</strong> DC1, DC2, DUME, DC4, tender form, BPU / DQE, certificates — each with a status before submission.</span></li>
+        <li><i data-lucide="file-text"></i><span><strong>A Word first draft ready to review:</strong> sections in the buyer's order, paragraphs reused from your past proposals, sources cited.</span></li>
+      </ul>
+      <p class="value-foot"><i data-lucide="info"></i> Figures = <strong>estimate on the fictional sample</strong>, not a promise or a guarantee. Real time depends on your tender, your documents and your review, which remains mandatory.</p>
+    </section>
+
+    <section class="steps" aria-label="How it works" id="how">
+      <div class="step" data-step="1"><span class="n">1</span><h3>Load the tender pack</h3><p class="js-pieces">RC, CCAP, CCTP, DQE</p></div>
+      <div class="step" data-step="2"><span class="n">2</span><h3>Search past proposals</h3><p>In-browser search, source and page cited.</p></div>
+      <div class="step" data-step="3"><span class="n">3</span><h3>Enter and check</h3><p>Price, team, commitments — live consistency checks.</p></div>
+      <div class="step" data-step="4"><span class="n">4</span><h3>Export the pack</h3><p>Proposal in the imposed template + matrix + documents (DC1, DC2, DUME, BPU / DQE…) → Word / PDF.</p></div>
+    </section>
+
+    <div id="demoRoot" role="tabpanel">
+    <section class="pipeline" id="pipeline" aria-label="Animated tender analysis">
+      <div class="pipeline-stage">
+        <div class="pipe-node"><div class="ico"><i data-lucide="files"></i></div><strong>Tender documents</strong><small>fictional sample</small></div>
+        <span class="pipe-arrow">→</span>
+        <div class="pipe-node"><div class="ico"><i data-lucide="scan-text"></i></div><strong>Analysis</strong><small>imposed template found</small></div>
+        <span class="pipe-arrow">→</span>
+        <div class="pipe-node"><div class="ico"><i data-lucide="gauge"></i></div><strong>Scored criteria</strong><small>RC weightings</small></div>
+        <span class="pipe-arrow">→</span>
+        <div class="pipe-node"><div class="ico"><i data-lucide="circle-check"></i></div><strong>Coverage</strong><small>by your documents</small></div>
+      </div>
+      <div class="pipe-live" aria-live="polite">
+        <div class="pipe-crit" id="pipeCrit"></div>
+        <div class="pipe-ring-box">
+          <div class="ring" id="pipeRing" style="margin:0 auto"><span id="pipeRingPct">0%</span></div>
+          <small>Requirements covered</small>
+        </div>
+      </div>
+      <div class="fly-docs" id="flyDocs" aria-hidden="true"></div>
+      <div class="actions-row">
+        <button type="button" class="btn btn-primary" id="btnRun"><i data-lucide="play"></i> Replay the pre-analysed sample</button>
+        <span class="badge-sample">Pre-analysed sample</span>
+      </div>
+    </section>
+
+    <section class="panel hidden" id="panelExtract" aria-label="Data extracted from the tender">
+      <div class="panel-head">
+        <h2><i data-lucide="sparkles"></i> Pre-analysed sample tender</h2>
+        <span class="badge-sample">Pre-analysed sample</span>
+      </div>
+      <p class="muted-p" id="tenderTitle"></p>
+      <div class="tender-meta" id="tenderMeta"></div>
+      <h3 class="h3s">Tender documents <small>tap a document to see the extracts</small></h3>
+      <div class="dce-files" id="dceFiles"></div>
+      <div class="two-col">
+        <div class="cadre-box">
+          <h3><i data-lucide="layout-list"></i> <span id="cadreName"></span></h3>
+          <p id="cadreNote" class="doc-note"></p>
+          <ol id="cadreList"></ol>
+        </div>
+        <div class="gonogo" id="gonogo"></div>
+      </div>
+      <h3 class="h3s">Award criteria (RC)</h3>
+      <div class="criteria" id="criteria"></div>
+      <div class="score-wrap" style="margin:18px 0">
+        <div class="ring" id="coverRing" aria-label="Coverage rate"><span id="coverPct">0%</span></div>
+        <div class="score-legend"><strong>Requirements covered (demo)</strong><br />Share of requirements your documents or inputs answer. The rest are flagged “to check” — never invented.</div>
+      </div>
+      <div class="extract-grid two-col">
+        <div><h3 class="h3s">Key dates</h3><table class="table" id="deadlines"><thead><tr><th>Milestone</th><th>Date</th></tr></thead><tbody></tbody></table></div>
+        <div><h3 class="h3s">Documents to submit</h3><table class="table" id="docs"><thead><tr><th>Document</th><th></th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <h3 class="h3s">Requirements <span class="badge-sample">extracted from RC / CCAP / CCTP</span></h3>
+      <div class="req-list" id="reqs"></div>
+      <div id="alerts" class="alerts"></div>
+    </section>
+
+    <section class="panel" id="panelKb" aria-label="Search your past proposals">
+      <div class="panel-head">
+        <h2><i data-lucide="library"></i> Your past proposals and documents</h2>
+        <span class="badge-live">Live · in-browser search</span>
+      </div>
+      <p class="muted-p">Fictional company <strong id="kbCompany"></strong> — <span id="kbDesc"></span>. The search really runs in your browser; every result cites the file and page.</p>
+      <div class="search-row">
+        <input id="kbQ" type="search" autocomplete="off" aria-label="Search your documents" />
+        <button type="button" class="btn btn-ghost" id="btnKb">Search</button>
+      </div>
+      <div class="chips" id="kbChips"></div>
+      <div id="kbHits"></div>
+    </section>
+
+    <section class="panel" id="panelForm" aria-label="Your bid inputs">
+      <div class="panel-head">
+        <h2><i data-lucide="clipboard-list"></i> Your bid inputs</h2>
+        <span class="badge-live">Live · your figures</span>
+      </div>
+      <form class="form-grid" id="bidForm" onsubmit="return false"></form>
+      <div class="checks-box">
+        <div class="checks-head"><h3><i data-lucide="shield-check"></i> Pre-submission checks</h3><span class="pill" id="checksSummary"></span></div>
+        <ul class="checks" id="checks"></ul>
+        <p class="doc-note">Change a value: the checks update. Prices come from you, never from the AI.</p>
+      </div>
+      <div class="actions-row">
+        <button type="button" class="btn btn-primary" id="btnGenerate"><i data-lucide="wand-sparkles"></i> Generate the draft proposal</button>
+      </div>
+    </section>
+
+    <section class="panel hidden" id="panelPack" aria-label="Generated response pack">
+      <div class="panel-head">
+        <h2><i data-lucide="file-check-2"></i> Technical proposal to review</h2>
+        <span class="badge-live">Assembled in your browser · human review required</span>
+      </div>
+      <div class="disclaimer-banner" style="margin:0 0 14px">
+        <i data-lucide="shield-alert"></i>
+        <div>Draft only. Check every statement and every source before submitting a real bid.</div>
+      </div>
+      <p class="pill stale hidden" id="staleNote">Your inputs changed — regenerate the proposal.</p>
+      <p class="doc-note" id="packCadre"></p>
+      <div class="proposal-out" id="proposalOut"></div>
+      <h3 class="h3s">Pre-submission checks</h3>
+      <ul class="checks" id="packChecks"></ul>
+      <h3 class="h3s">Compliance matrix</h3>
+      <div class="table-scroll"><table class="table" id="matrix"><thead><tr><th>Ref.</th><th>Requirement</th><th>Status</th><th>Sourced answer</th></tr></thead><tbody></tbody></table></div>
+      <h3 class="h3s">Documents to submit: DC1, DC2, DUME, BPU / DQE…</h3>
+      <table class="table" id="checklist"><thead><tr><th>Document</th><th>Status</th></tr></thead><tbody></tbody></table>
+      <div class="actions-row">
+        <button type="button" class="btn btn-primary" id="btnDocx"><i data-lucide="file-down"></i> Download Word (DOCX)</button>
+        <button type="button" class="btn btn-ghost" id="btnPdf"><i data-lucide="printer"></i> Export to PDF</button>
+      </div>
+    </section>
+    </div>
+
+    <section class="panel" id="plans" aria-label="Pricing and hosting">
+      <div class="panel-head"><h2><i data-lucide="cloud"></i> Pricing &amp; hosting</h2></div>
+      <div class="quote-card">
+        <div>
+          <span class="pill ok">All service sectors</span>
+          <h3>On quote</h3>
+          <p class="trust-p">Pricing depends on your sector, your tender volume and the import of your past files. We reply in writing, no commitment.</p>
+          <ul>
+            <li>Tool set up for your sector: vocabulary, documents, checks</li>
+            <li>Import of your past proposals, procedures, CVs and references</li>
+            <li>Word proposal in your branding, in the buyer's imposed template</li>
+            <li>Compliance matrix and DC1, DC2, DUME, BPU / DQE checklist</li>
+          </ul>
+        </div>
+        <div class="quote-cta">
+          <a class="btn btn-primary" href="mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Quote%20request%20%E2%80%94%20service-sector%20tenders"><i data-lucide="mail"></i> Request a quote</a>
+          <small>Reply by email · <a href="mailto:LaborX (https://laborx.com/freelancers/users/id475124)">LaborX (https://laborx.com/freelancers/users/id475124)</a></small>
+        </div>
+      </div>
+      <div class="host-grid">
+        <div class="own-card host-card default">
+          <span class="pill ok">Default</span>
+          <h3><i data-lucide="cloud"></i> Online</h3>
+          <p class="trust-p"><strong>Online first</strong>, isolated workspace, AI in Europe; local version as an option.</p>
+          <ul>
+            <li>Nothing to install — everything runs in your browser.</li>
+            <li>One isolated workspace per company; your data is used only for you, never to train the AI.</li>
+            <li>Limited, logged access; deletion on request.</li>
+          </ul>
+        </div>
+        <div class="own-card host-card">
+          <span class="pill">Option</span>
+          <h3><i data-lucide="building-2"></i> Local version</h3>
+          <p class="trust-p">Installed on your PC or an office mini-PC, built to run offline. Mostly useful for sensitive contracts (protected sites, security).</p>
+          <ul>
+            <li>No access to your data from our side on this option.</li>
+            <li><a href="install-kit/">Free installation kit</a>: prerequisites, installer verification, steps.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="trust" aria-label="Your data, protected">
+      <div class="panel-head"><h2><i data-lucide="shield-check"></i> Your data, protected</h2></div>
+      <p class="muted-p">We never take control of your computer: no remote-access tool, and we never ask for your passwords.</p>
+      <div class="trust-grid">
+        <div class="own-card"><h3><i data-lucide="box"></i> Isolated workspace</h3><p class="trust-p">Each company has its own workspace. Your tenders, prices and past proposals are never mixed with anyone else's.</p></div>
+        <div class="own-card"><h3><i data-lucide="map-pin"></i> AI in Europe</h3><p class="trust-p">The AI runs on infrastructure hosted in Europe, never trained on your data.</p></div>
+        <div class="own-card"><h3><i data-lucide="video"></i> Support: you share</h3><p class="trust-p">Video help where <strong>you</strong> share your screen. We guide — we never take control.</p></div>
+        <div class="own-card"><h3><i data-lucide="handshake"></i> Confidentiality agreement</h3><p class="trust-p">An NDA is signed before you share any real document. Try the fictional samples on this page first.</p></div>
+        <div class="own-card"><h3><i data-lucide="quote"></i> Sources cited</h3><p class="trust-p">Every paragraph points to the tender clause or the page of your document it comes from.</p></div>
+        <div class="own-card"><h3><i data-lucide="user-round-check"></i> Always reviewed by you</h3><p class="trust-p">Every draft is checked by your team before it reaches the buyer.</p></div>
+      </div>
+    </section>
+
+    <section class="panel" id="limits" aria-label="Limits, openly">
+      <div class="panel-head"><h2><i data-lucide="badge-alert"></i> Limits, openly</h2></div>
+      <ul class="limits">
+        <li><strong>AI can be wrong</strong> — cited sources reduce the risk without removing it.</li>
+        <li><strong>Human review required</strong> — the person in charge of bids signs off before any submission.</li>
+        <li><strong>No automatic pricing</strong> — BPU and DQE prices come from you, not the AI.</li>
+        <li><strong>No score or award guaranteed</strong> — we structure the answer to the template and RC criteria; we don't predict the buyer's decision.</li>
+        <li><strong>Indicative times</strong> — durations shown are estimates on the fictional sample, not a commitment.</li>
+        <li><strong>This demo</strong> — the sample tenders are <em>pre-analysed</em> (stored results); search, checks, assembly and Word export run live in your browser, on fictional data.</li>
+      </ul>
+    </section>
+
+    <footer class="site-foot">
+      <p>Nyyo Automation · <a href="mailto:LaborX (https://laborx.com/freelancers/users/id475124)">LaborX (https://laborx.com/freelancers/users/id475124)</a> · <a href="fr/" hreflang="fr" lang="fr">Version française</a> · Fictional sample data</p>
+    </footer>
+  </div>
+
+  <div class="sticky-hire">
+    <a class="btn btn-primary" href="mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Quote%20request%20%E2%80%94%20service-sector%20tenders"><i data-lucide="mail"></i> Request a quote</a>
+    <button type="button" class="btn btn-ghost" id="btnRunSticky" aria-label="Replay the sample"><i data-lucide="play"></i><span class="lbl">Replay the sample</span></button>
+  </div>
+
+  <dialog id="srcModal" class="src-modal" aria-label="Source extract">
+    <div class="src-inner">
+      <button type="button" class="btn btn-ghost src-close" id="srcClose" aria-label="Close"><i data-lucide="x"></i></button>
+      <div id="srcBody"></div>
+    </div>
+  </dialog>
+  <div id="printRoot" class="hidden"></div>
+</body>
+</html>

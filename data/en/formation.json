@@ -1,0 +1,755 @@
+{
+ "id": "formation",
+ "name": "Training",
+ "icon": "graduation-cap",
+ "h1": "programmes and trainers, proposal ready to review",
+ "lead": "Call-off framework, 2 lots: programmes, trainers, evaluations and accessibility linked to the CCTP.",
+ "meta": {
+  "tender_id": "CDG-VB-2026-FORM-05",
+  "title": "Staff training — lot 1 office software and digital tools, lot 2 management and risk prevention",
+  "buyer": "Val-Brumeux local-government management centre (fictional)",
+  "procedure": "Adapted procedure — call-off framework agreement, 2 lots",
+  "cpv": "80500000 — Training services",
+  "term": "3 years",
+  "source_files": [
+   {
+    "name": "RC.pdf",
+    "type": "Rules (RC)",
+    "pages": 12
+   },
+   {
+    "name": "CCAP.pdf",
+    "type": "Admin terms (CCAP)",
+    "pages": 18
+   },
+   {
+    "name": "CCTP.pdf",
+    "type": "Tech. specs (CCTP)",
+    "pages": 28
+   },
+   {
+    "name": "Cadre_memoire.docx",
+    "type": "Imposed template",
+    "pages": 3
+   },
+   {
+    "name": "BPU.xlsx",
+    "type": "BPU",
+    "pages": 2
+   },
+   {
+    "name": "DQE.xlsx",
+    "type": "DQE",
+    "pages": 2
+   }
+  ]
+ },
+ "fly": [
+  "RC.pdf",
+  "CCTP.pdf",
+  "Template.docx",
+  "BPU.xlsx"
+ ],
+ "pieces": "RC · CCAP · CCTP · proposal template · BPU · DQE",
+ "cadre": {
+  "name": "Imposed proposal template (RC appendix 2)",
+  "note": "5 sections kept in order; one proposal per lot."
+ },
+ "value": {
+  "rows": [
+   [
+    "Reading the tender pack and spotting requirements",
+    "≈ 4 h",
+    "≈ 1 h of review"
+   ],
+   [
+    "First draft in the imposed template",
+    "≈ 10 h",
+    "≈ 2 h 30 of review and edits"
+   ],
+   [
+    "Checking documents and forms",
+    "≈ 2 h",
+    "≈ 30 min"
+   ]
+  ],
+  "total": [
+   "≈ 16 h",
+   "≈ 4 h"
+  ]
+ },
+ "deadlines": [
+  {
+   "label": "Questions deadline",
+   "date": "09/11/2026",
+   "time": "12:00",
+   "tz": "local time"
+  },
+  {
+   "label": "Bid deadline",
+   "date": "20/11/2026",
+   "time": "12:00",
+   "tz": "local time"
+  },
+  {
+   "label": "Bid validity",
+   "date": "20/03/2027",
+   "note": "120 days"
+  },
+  {
+   "label": "Planned start",
+   "date": "04/01/2027",
+   "note": "Indicative"
+  }
+ ],
+ "scoring": [
+  {
+   "id": "C1",
+   "name": "Teaching quality and content",
+   "weight": 30,
+   "description": "Programmes, active methods, placement test, materials."
+  },
+  {
+   "id": "C2",
+   "name": "Trainers and references",
+   "weight": 20,
+   "description": "Trainer experience, references with local authorities."
+  },
+  {
+   "id": "C3",
+   "name": "Evaluation and follow-up",
+   "weight": 10,
+   "description": "End-of-course and 3-month evaluations, reports."
+  },
+  {
+   "id": "C4",
+   "name": "Organisation and accessibility",
+   "weight": 10,
+   "description": "Group size, set-up lead time, disability contact."
+  },
+  {
+   "id": "C5",
+   "name": "Price",
+   "weight": 30,
+   "description": "BPU per lot and annual DQE simulation."
+  }
+ ],
+ "requirements": [
+  {
+   "id": "E01",
+   "category": "Programmes",
+   "text": "Detailed programme per module: objectives, prerequisites, outline and active methods (at least 50% practical exercises).",
+   "source": "CCTP.pdf",
+   "page": 6,
+   "art": "Art. 3.1",
+   "criterion": "C1",
+   "kb": "kb-prog-1",
+   "check": null
+  },
+  {
+   "id": "E02",
+   "category": "Groups",
+   "text": "Groups of 12 trainees maximum in person and 8 in virtual classes.",
+   "source": "CCTP.pdf",
+   "page": 8,
+   "art": "Art. 4.1",
+   "criterion": "C4",
+   "kb": "kb-logistique",
+   "check": "group"
+  },
+  {
+   "id": "E03",
+   "category": "Trainers",
+   "text": "Trainers with at least 5 years' experience in the field and experience with local authorities; CVs supplied.",
+   "source": "RC.pdf",
+   "page": 7,
+   "art": "Art. 6.2",
+   "criterion": "C2",
+   "kb": "kb-cv-lead",
+   "check": "lead"
+  },
+  {
+   "id": "E04",
+   "category": "Evaluation",
+   "text": "End-of-course evaluation and 3-month follow-up evaluation; report sent for each purchase order.",
+   "source": "CCTP.pdf",
+   "page": 12,
+   "art": "Art. 6",
+   "criterion": "C3",
+   "kb": "kb-eval",
+   "check": null
+  },
+  {
+   "id": "E05",
+   "category": "Placement",
+   "text": "Prior placement test (online) for office-software modules.",
+   "source": "CCTP.pdf",
+   "page": 10,
+   "art": "Art. 5.2",
+   "criterion": "C1",
+   "kb": "kb-position",
+   "check": null
+  },
+  {
+   "id": "E06",
+   "category": "Accessibility",
+   "text": "Named disability contact; materials and arrangements adapted on request.",
+   "source": "CCTP.pdf",
+   "page": 14,
+   "art": "Art. 7",
+   "criterion": "C4",
+   "kb": "kb-handicap",
+   "check": null
+  },
+  {
+   "id": "E07",
+   "category": "Lead time",
+   "text": "In-house sessions at the buyer's premises or remote; set-up within 4 weeks of the purchase order at most.",
+   "source": "CCTP.pdf",
+   "page": 16,
+   "art": "Art. 8",
+   "criterion": "C4",
+   "kb": "kb-logistique",
+   "check": "setup"
+  },
+  {
+   "id": "E08",
+   "category": "Materials",
+   "text": "Materials supplied in an accessible digital format, reusable internally by the buyer.",
+   "source": "CCAP.pdf",
+   "page": 9,
+   "art": "Art. 5.3",
+   "criterion": "C1",
+   "kb": "kb-supports",
+   "check": null
+  },
+  {
+   "id": "E09",
+   "category": "References",
+   "text": "Three references of training for local authorities over the last 3 years.",
+   "source": "RC.pdf",
+   "page": 8,
+   "art": "Art. 6.3",
+   "criterion": "C2",
+   "kb": "kb-refs",
+   "check": null
+  },
+  {
+   "id": "E10",
+   "category": "Lot 2",
+   "text": "“Psychosocial risks and conflict management” module adapted to local public services.",
+   "source": "CCTP.pdf",
+   "page": 20,
+   "art": "Art. 10.2",
+   "criterion": "C1",
+   "kb": "kb-prog-2",
+   "check": null
+  },
+  {
+   "id": "E11",
+   "category": "Admin",
+   "text": "Training-provider activity declaration number to be supplied.",
+   "source": "RC.pdf",
+   "page": 6,
+   "art": "Art. 6.1",
+   "criterion": "C2",
+   "kb": "kb-nda",
+   "check": null
+  },
+  {
+   "id": "E12",
+   "category": "Certificates",
+   "text": "Individual end-of-training certificate given to each trainee.",
+   "source": "CCTP.pdf",
+   "page": 13,
+   "art": "Art. 6.4",
+   "criterion": "C3",
+   "kb": null,
+   "check": null
+  },
+  {
+   "id": "E13",
+   "category": "Price",
+   "text": "BPU: price per day (in-house) and per trainee (open course); annual DQE simulation per lot, quantities unchanged.",
+   "source": "RC.pdf",
+   "page": 9,
+   "art": "Art. 8",
+   "criterion": "C5",
+   "kb": null,
+   "check": "price"
+  }
+ ],
+ "required_documents": [
+  {
+   "id": "D1",
+   "name": "DC1 — Application letter",
+   "mandatory": true,
+   "notes": "Official form, signed; or DUME",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D2",
+   "name": "DC2 — Bidder declaration",
+   "mandatory": true,
+   "notes": "Financial, technical and professional capacity; or DUME",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D3",
+   "name": "DUME — European Single Procurement Document (ESPD)",
+   "mandatory": false,
+   "notes": "Accepted instead of DC1 + DC2",
+   "kind": "form",
+   "alt": true
+  },
+  {
+   "id": "D4",
+   "name": "DC4 — Subcontracting declaration",
+   "mandatory": false,
+   "notes": "If a freelance trainer is involved",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D5",
+   "name": "Technical proposal (imposed template, appendix 2)",
+   "mandatory": true,
+   "notes": "One per lot",
+   "kind": "memo",
+   "alt": false
+  },
+  {
+   "id": "D6",
+   "name": "Completed BPU (lots 1 and 2)",
+   "mandatory": true,
+   "notes": "In-house day, open-course trainee",
+   "kind": "price",
+   "alt": false
+  },
+  {
+   "id": "D7",
+   "name": "Completed DQE",
+   "mandatory": true,
+   "notes": "Quantities unchanged",
+   "kind": "price",
+   "alt": false
+  },
+  {
+   "id": "D8",
+   "name": "Acte d'engagement (AE) — tender form",
+   "mandatory": true,
+   "notes": "One per lot, signed",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D9",
+   "name": "Training-provider activity declaration",
+   "mandatory": true,
+   "notes": "Declaration number",
+   "kind": "file",
+   "alt": false
+  },
+  {
+   "id": "D10",
+   "name": "Detailed module programmes",
+   "mandatory": true,
+   "notes": "Objectives, prerequisites, outline",
+   "kind": "file",
+   "alt": false
+  },
+  {
+   "id": "D11",
+   "name": "Trainer CVs",
+   "mandatory": true,
+   "notes": "Min. 5 years' experience",
+   "kind": "lead",
+   "alt": false
+  },
+  {
+   "id": "D12",
+   "name": "Social-security (URSSAF) and tax certificates",
+   "mandatory": true,
+   "notes": "Less than 6 months old",
+   "kind": "file",
+   "alt": false
+  },
+  {
+   "id": "D13",
+   "name": "Professional liability insurance certificate",
+   "mandatory": true,
+   "notes": "Valid",
+   "kind": "file",
+   "alt": false
+  }
+ ],
+ "alerts": [
+  {
+   "level": "warn",
+   "text": "Group caps: 12 trainees in person, 8 remote (CCTP p.8)."
+  },
+  {
+   "level": "warn",
+   "text": "Bidding on both lots: one proposal and one tender form per lot."
+  },
+  {
+   "level": "info",
+   "text": "3-month follow-up evaluation required."
+  },
+  {
+   "level": "info",
+   "text": "Set-up within 4 weeks of each purchase order."
+  }
+ ],
+ "company": "Atelier Brume Formation (fictional provider)",
+ "company_desc": "programmes, trainer CVs, evaluation procedures, references",
+ "chunks": [
+  {
+   "id": "kb-prog-1",
+   "title": "Programme — Spreadsheets and collaboration tools for public staff (2 days)",
+   "source": "programmes/tableur_outils_collaboratifs.pdf",
+   "page": 1,
+   "tags": [
+    "programme",
+    "office software",
+    "practical exercises"
+   ],
+   "text": "Objectives, prerequisites and hour-by-hour outline. 60% of the time on practical exercises from real municipal cases (budget tracking, team rota, dashboard). Materials and corrected exercises handed out at the end."
+  },
+  {
+   "id": "kb-prog-2",
+   "title": "Programme — Preventing psychosocial risks and managing conflict",
+   "source": "programmes/rps_conflits.pdf",
+   "page": 2,
+   "tags": [
+    "psychosocial risks",
+    "conflict",
+    "management"
+   ],
+   "text": "2-day module for front-line managers: spotting weak signals, difficult conversations, mediation. Case studies from local public services (reception, technical services)."
+  },
+  {
+   "id": "kb-position",
+   "title": "Tool — Online placement test",
+   "source": "pedagogie/test_positionnement.pdf",
+   "page": 1,
+   "tags": [
+    "placement",
+    "test",
+    "levels"
+   ],
+   "text": "20-minute test sent 10 days before the session; balanced groups in 3 levels; results shared with the buyer's training department."
+  },
+  {
+   "id": "kb-eval",
+   "title": "Procedure — End-of-course and follow-up evaluations",
+   "source": "qualite/evaluations.pdf",
+   "page": 3,
+   "tags": [
+    "evaluation",
+    "end of course",
+    "follow-up",
+    "report"
+   ],
+   "text": "End-of-course questionnaire, 3-month follow-up questionnaire for the trainee and their manager. Summary report sent for each purchase order."
+  },
+  {
+   "id": "kb-cv-lead",
+   "title": "CV — Thomas Lemoine, lead office-software trainer",
+   "source": "rh/cv_thomas_lemoine.pdf",
+   "page": 1,
+   "tags": [
+    "trainer",
+    "office software",
+    "local authorities"
+   ],
+   "text": "Thomas Lemoine (fictional person): 11 years training office software and digital tools, work with around forty local authorities, lead trainer for lot 1."
+  },
+  {
+   "id": "kb-cv-2",
+   "title": "CV — Sophie Arnaud, management and prevention trainer",
+   "source": "rh/cv_sophie_arnaud.pdf",
+   "page": 1,
+   "tags": [
+    "trainer",
+    "management",
+    "prevention"
+   ],
+   "text": "Sophie Arnaud (fictional person): 14 years' experience, 8 with local authorities, in front-line management and psychosocial-risk prevention."
+  },
+  {
+   "id": "kb-handicap",
+   "title": "Commitment — Disability contact and adapted materials",
+   "source": "accessibilite/referent_handicap.pdf",
+   "page": 1,
+   "tags": [
+    "disability contact",
+    "accessibility",
+    "adaptation"
+   ],
+   "text": "Disability contact reachable before each session; materials (large print, audio), pace and arrangements adapted at the trainee's or buyer's request."
+  },
+  {
+   "id": "kb-logistique",
+   "title": "Organisation — Setting up in-house and remote sessions",
+   "source": "organisation/mise_en_place_sessions.pdf",
+   "page": 2,
+   "tags": [
+    "virtual class",
+    "in-house",
+    "groups",
+    "lead time"
+   ],
+   "text": "Groups of 12 trainees maximum in the room and 8 in virtual classes. Average set-up time observed: 3 weeks after the purchase order (fictional internal figure). Equipment lent if needed."
+  },
+  {
+   "id": "kb-supports",
+   "title": "Charter — Accessible digital materials",
+   "source": "pedagogie/charte_supports.pdf",
+   "page": 1,
+   "tags": [
+    "materials",
+    "accessibility",
+    "reuse"
+   ],
+   "text": "Materials supplied as accessible PDF and editable files, with an internal reuse right for the client's own staff."
+  },
+  {
+   "id": "kb-refs",
+   "title": "References — Local authorities trained (2024–2026)",
+   "source": "references/references_collectivites.pdf",
+   "page": 1,
+   "tags": [
+    "references",
+    "local authorities"
+   ],
+   "text": "Port-Brumeux town (fictional): 18 office-software sessions. Haut-Brumeux community of communes (fictional): managers' pathway. Brume water syndicate (fictional): conflict prevention. Contacts supplied."
+  },
+  {
+   "id": "kb-nda",
+   "title": "Training-provider activity declaration",
+   "source": "admin/declaration_activite.pdf",
+   "page": 1,
+   "tags": [
+    "activity declaration",
+    "number"
+   ],
+   "text": "Activity-declaration receipt (fictional number for the demo), attached to every application."
+  }
+ ],
+ "chips": [
+  "placement test",
+  "follow-up evaluation",
+  "disability contact",
+  "virtual class",
+  "psychosocial risks",
+  "trainer"
+ ],
+ "firstQuery": "follow-up evaluation",
+ "sections": {
+  "C1": {
+   "title": "Section 1 — Teaching quality and content",
+   "bullets": [
+    {
+     "text": "Detailed programmes per module (objectives, prerequisites, outline), with 60% practical exercises drawn from day-to-day services.",
+     "cite": "kb-prog-1"
+    },
+    {
+     "text": "Online placement test before office-software modules, for balanced groups.",
+     "cite": "kb-position"
+    },
+    {
+     "text": "Lot 2: psychosocial risks and conflict management module, with case studies from local public services.",
+     "cite": "kb-prog-2"
+    },
+    {
+     "text": "Accessible digital materials, reusable internally by the buyer.",
+     "cite": "kb-supports"
+    }
+   ]
+  },
+  "C2": {
+   "title": "Section 2 — Trainers and references",
+   "bullets": [
+    {
+     "text": "Lot 2 trainer: 14 years' experience, 8 with local authorities.",
+     "cite": "kb-cv-2"
+    },
+    {
+     "text": "Three recent references with local authorities, contacts supplied.",
+     "cite": "kb-refs"
+    },
+    {
+     "text": "Activity-declaration receipt attached.",
+     "cite": "kb-nda"
+    }
+   ]
+  },
+  "C3": {
+   "title": "Section 3 — Evaluation and follow-up",
+   "bullets": [
+    {
+     "text": "End-of-course evaluation and 3-month follow-up; report sent for each purchase order.",
+     "cite": "kb-eval"
+    }
+   ]
+  },
+  "C4": {
+   "title": "Section 4 — Organisation and accessibility",
+   "bullets": [
+    {
+     "text": "In-house sessions at your premises or in virtual classes, equipment lent if needed.",
+     "cite": "kb-logistique"
+    },
+    {
+     "text": "Named disability contact; materials and arrangements adapted on request.",
+     "cite": "kb-handicap"
+    }
+   ]
+  },
+  "C5": {
+   "title": "Section 5 — Price",
+   "bullets": [
+    {
+     "text": "BPU completed per lot (in-house day, open-course trainee); DQE completed without changing quantities.",
+     "cite": null
+    }
+   ]
+  }
+ },
+ "form": {
+  "fields": [
+   {
+    "id": "price",
+    "label": "In-house training day price (€ excl. VAT)",
+    "type": "money",
+    "value": 1150,
+    "min": 0,
+    "step": 10
+   },
+   {
+    "id": "group",
+    "label": "Max. in-person group size",
+    "type": "number",
+    "value": 12,
+    "min": 1,
+    "max": 30,
+    "step": 1
+   },
+   {
+    "id": "group_remote",
+    "label": "Max. virtual-class group size",
+    "type": "number",
+    "value": 8,
+    "min": 1,
+    "max": 30,
+    "step": 1
+   },
+   {
+    "id": "lead",
+    "label": "Lot 1 lead trainer",
+    "type": "select",
+    "value": "Thomas Lemoine",
+    "options": [
+     [
+      "Thomas Lemoine",
+      "Thomas Lemoine (11 yrs)"
+     ],
+     [
+      "Other",
+      "Other (fill in the DOCX)"
+     ]
+    ]
+   },
+   {
+    "id": "setup",
+    "label": "Set-up lead time (weeks)",
+    "type": "number",
+    "value": 3,
+    "min": 1,
+    "max": 12,
+    "step": 1
+   }
+  ],
+  "notesCrit": "C1",
+  "notes": "Bidding on both lots. Programmes adaptable to the buyer's software."
+ },
+ "formBullets": {
+  "C2": [
+   {
+    "tpl": "Lot 1 lead trainer: {lead}.",
+    "cite": "kb-cv-lead",
+    "citeIf": [
+     "lead",
+     "Thomas Lemoine"
+    ]
+   }
+  ],
+  "C4": [
+   {
+    "tpl": "Groups of {group} trainees maximum in person and {group_remote} in virtual classes; set-up within {setup} weeks of the purchase order.",
+    "cite": "kb-logistique"
+   }
+  ],
+  "C5": [
+   {
+    "tpl": "In-house training day price: {price}. Prices come from the provider, never from the AI."
+   }
+  ]
+ },
+ "checks": [
+  {
+   "id": "group",
+   "op": "le",
+   "field": "group",
+   "value": 12,
+   "label": "In-person groups ≤ 12",
+   "ref": "CCTP p.8",
+   "ok": "{group} trainees maximum (12 allowed).",
+   "ko": "{group} trainees — above the 12 allowed."
+  },
+  {
+   "id": "group_remote",
+   "op": "le",
+   "field": "group_remote",
+   "value": 8,
+   "label": "Remote groups ≤ 8",
+   "ref": "CCTP p.8",
+   "ok": "{group_remote} trainees maximum remote (8 allowed).",
+   "ko": "{group_remote} remote trainees — above the 8 allowed."
+  },
+  {
+   "id": "setup",
+   "op": "le",
+   "field": "setup",
+   "value": 4,
+   "label": "Set-up ≤ 4 weeks",
+   "ref": "CCTP p.16",
+   "ok": "{setup} weeks (maximum 4).",
+   "ko": "{setup} weeks — above the 4 weeks required."
+  },
+  {
+   "id": "lead",
+   "op": "ne",
+   "field": "lead",
+   "value": "Other",
+   "label": "Lead trainer named",
+   "ref": "RC p.7",
+   "ok": "Lead trainer: {lead}.",
+   "ko": "Name a lead trainer."
+  },
+  {
+   "id": "price",
+   "op": "gt",
+   "field": "price",
+   "value": 0,
+   "label": "Price entered in the BPU",
+   "ref": "RC p.9",
+   "ok": "Price entered: {price}.",
+   "ko": "Enter the price."
+  }
+ ],
+ "file": "CDG-VB-2026-FORM-05_technical_proposal_draft"
+}

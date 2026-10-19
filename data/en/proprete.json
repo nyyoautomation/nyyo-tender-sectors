@@ -1,0 +1,768 @@
+{
+ "id": "proprete",
+ "name": "Cleaning",
+ "icon": "sparkles",
+ "h1": "proposal in the buyer's template, ready to review",
+ "lead": "Office cleaning, multiple sites, a nursery: frequencies, staff transfer and hours-vs-DQE consistency checked.",
+ "meta": {
+  "tender_id": "CAVB-2026-PROP-07",
+  "title": "Cleaning and hygiene of the community headquarters and 6 annex sites",
+  "buyer": "Val-Brumeux urban community (fictional)",
+  "procedure": "Open procedure — call-off framework agreement, single lot",
+  "cpv": "90911200 — Building-cleaning services",
+  "term": "1 year, renewable 3 times",
+  "source_files": [
+   {
+    "name": "RC.pdf",
+    "type": "Rules (RC)",
+    "pages": 16
+   },
+   {
+    "name": "CCAP.pdf",
+    "type": "Admin terms (CCAP)",
+    "pages": 22
+   },
+   {
+    "name": "CCTP.pdf",
+    "type": "Tech. specs (CCTP)",
+    "pages": 38
+   },
+   {
+    "name": "Cadre_memoire_technique.docx",
+    "type": "Imposed template",
+    "pages": 4
+   },
+   {
+    "name": "DQE.xlsx",
+    "type": "DQE",
+    "pages": 3
+   },
+   {
+    "name": "Bordereau_surfaces.xlsx",
+    "type": "Floor areas",
+    "pages": 2
+   }
+  ]
+ },
+ "fly": [
+  "RC.pdf",
+  "CCTP.pdf",
+  "Template.docx",
+  "DQE.xlsx"
+ ],
+ "pieces": "RC · CCAP · CCTP · proposal template · DQE",
+ "cadre": {
+  "name": "Imposed proposal template (RC appendix 2)",
+  "note": "5 sections kept in the buyer's order — nothing is reshuffled."
+ },
+ "value": {
+  "rows": [
+   [
+    "Reading the tender pack and spotting requirements",
+    "≈ 5 h",
+    "≈ 1 h of review"
+   ],
+   [
+    "First draft in the imposed template",
+    "≈ 14 h",
+    "≈ 3 h of review and edits"
+   ],
+   [
+    "Checking documents and forms",
+    "≈ 2 h",
+    "≈ 30 min"
+   ]
+  ],
+  "total": [
+   "≈ 21 h",
+   "≈ 4 h 30"
+  ]
+ },
+ "deadlines": [
+  {
+   "label": "Site visit (mandatory)",
+   "date": "04/11/2026",
+   "time": "09:30",
+   "tz": "local time"
+  },
+  {
+   "label": "Questions deadline",
+   "date": "13/11/2026",
+   "time": "12:00",
+   "tz": "local time"
+  },
+  {
+   "label": "Bid deadline",
+   "date": "27/11/2026",
+   "time": "12:00",
+   "tz": "local time"
+  },
+  {
+   "label": "Bid validity",
+   "date": "27/03/2027",
+   "note": "120 days"
+  },
+  {
+   "label": "Planned start",
+   "date": "01/02/2027",
+   "note": "Indicative"
+  }
+ ],
+ "scoring": [
+  {
+   "id": "C1",
+   "name": "Organisation and staffing",
+   "weight": 25,
+   "description": "Supervision, staff per site, cover for absences, transfer of incumbent staff."
+  },
+  {
+   "id": "C2",
+   "name": "Method, frequencies and protocols",
+   "weight": 20,
+   "description": "Protocols per room type (offices, washrooms, nursery) and CCTP frequencies."
+  },
+  {
+   "id": "C3",
+   "name": "Quality control and traceability",
+   "weight": 10,
+   "description": "Self-checks, joint inspections, fixing deviations."
+  },
+  {
+   "id": "C4",
+   "name": "Environmental and social approach",
+   "weight": 5,
+   "description": "Eco-labelled products, waste, social-inclusion clause."
+  },
+  {
+   "id": "C5",
+   "name": "Price",
+   "weight": 40,
+   "description": "Judged on the DQE (annual simulation); hours vs price consistency checked."
+  }
+ ],
+ "requirements": [
+  {
+   "id": "E01",
+   "category": "Frequencies",
+   "text": "Offices are fully cleaned three times a week; washrooms and touch points (handles, switches, rails) are cleaned daily, Monday to Friday.",
+   "source": "CCTP.pdf",
+   "page": 7,
+   "art": "Art. 4.2",
+   "criterion": "C2",
+   "kb": "kb-memo-1",
+   "check": null
+  },
+  {
+   "id": "E02",
+   "category": "Hours",
+   "text": "Work takes place between 6:00 and 8:30 or after 18:00; no work while the public is present, except washrooms.",
+   "source": "CCTP.pdf",
+   "page": 9,
+   "art": "Art. 5.1",
+   "criterion": "C1",
+   "kb": "kb-memo-1",
+   "check": null
+  },
+  {
+   "id": "E03",
+   "category": "Nursery",
+   "text": "“Les Hirondelles” nursery: specific protocol, fragrance- and allergen-free products, weekly toy disinfection.",
+   "source": "CCTP.pdf",
+   "page": 14,
+   "art": "Art. 7.3",
+   "criterion": "C2",
+   "kb": "kb-creche",
+   "check": null
+  },
+  {
+   "id": "E04",
+   "category": "Windows",
+   "text": "Accessible inside and outside windows twice a year; work at height with suitable means (pole, lift).",
+   "source": "CCTP.pdf",
+   "page": 18,
+   "art": "Art. 9",
+   "criterion": "C2",
+   "kb": "kb-vitrerie",
+   "check": null
+  },
+  {
+   "id": "E05",
+   "category": "Staff transfer",
+   "text": "The contractor takes over the staff assigned to the contract under the cleaning-sector collective agreement; named list of 14 staff in appendix 5.",
+   "source": "CCAP.pdf",
+   "page": 6,
+   "art": "Art. 3.4",
+   "criterion": "C1",
+   "kb": "kb-reprise",
+   "check": null
+  },
+  {
+   "id": "E06",
+   "category": "Supervision",
+   "text": "A lead supervisor is reachable from 6:00 to 19:00; an area manager makes a monthly inspection visit.",
+   "source": "CCTP.pdf",
+   "page": 11,
+   "art": "Art. 5.4",
+   "criterion": "C1",
+   "kb": "kb-cv-lead",
+   "check": "lead"
+  },
+  {
+   "id": "E07",
+   "category": "Absences",
+   "text": "Any absent cleaner is replaced from the first day of absence.",
+   "source": "CCAP.pdf",
+   "page": 9,
+   "art": "Art. 5.2",
+   "criterion": "C1",
+   "kb": "kb-remplacement",
+   "check": null
+  },
+  {
+   "id": "E08",
+   "category": "Quality control",
+   "text": "Quarterly joint inspections on a shared grid; deviations fixed within 24 working hours.",
+   "source": "CCTP.pdf",
+   "page": 24,
+   "art": "Art. 12.1",
+   "criterion": "C3",
+   "kb": "kb-qualite",
+   "check": null
+  },
+  {
+   "id": "E09",
+   "category": "Products",
+   "text": "Eco-labelled products (EU Ecolabel or equivalent) for at least 80% of uses; safety data sheets provided.",
+   "source": "CCTP.pdf",
+   "page": 27,
+   "art": "Art. 13.2",
+   "criterion": "C4",
+   "kb": "kb-ecolabel",
+   "check": "eco"
+  },
+  {
+   "id": "E10",
+   "category": "Waste",
+   "text": "Waste sorted according to each site's rules; bins emptied daily.",
+   "source": "CCTP.pdf",
+   "page": 29,
+   "art": "Art. 14",
+   "criterion": "C4",
+   "kb": "kb-dechets",
+   "check": null
+  },
+  {
+   "id": "E11",
+   "category": "Inclusion",
+   "text": "Social clause: at least 5% of hours performed by people on an inclusion pathway.",
+   "source": "CCAP.pdf",
+   "page": 15,
+   "art": "Art. 11",
+   "criterion": "C4",
+   "kb": "kb-insertion",
+   "check": null
+  },
+  {
+   "id": "E12",
+   "category": "Price",
+   "text": "The DQE is completed without changing quantities; annual hours stated in the proposal must match those in the DQE.",
+   "source": "RC.pdf",
+   "page": 10,
+   "art": "Art. 8.2",
+   "criterion": "C5",
+   "kb": null,
+   "check": "hours"
+  },
+  {
+   "id": "E13",
+   "category": "Site visit",
+   "text": "The site visit is mandatory; the visit certificate is attached to the bid, otherwise the bid is non-compliant.",
+   "source": "RC.pdf",
+   "page": 5,
+   "art": "Art. 4.1",
+   "criterion": "C1",
+   "kb": null,
+   "check": "visit"
+  }
+ ],
+ "required_documents": [
+  {
+   "id": "D1",
+   "name": "DC1 — Application letter",
+   "mandatory": true,
+   "notes": "Official form, signed; or DUME",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D2",
+   "name": "DC2 — Bidder declaration",
+   "mandatory": true,
+   "notes": "Financial, technical and professional capacity; or DUME",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D3",
+   "name": "DUME — European Single Procurement Document (ESPD)",
+   "mandatory": false,
+   "notes": "Accepted instead of DC1 + DC2",
+   "kind": "form",
+   "alt": true
+  },
+  {
+   "id": "D4",
+   "name": "DC4 — Subcontracting declaration",
+   "mandatory": false,
+   "notes": "If high-level window cleaning is subcontracted",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D5",
+   "name": "Technical proposal (imposed template, appendix 2)",
+   "mandatory": true,
+   "notes": "All 5 sections, in order",
+   "kind": "memo",
+   "alt": false
+  },
+  {
+   "id": "D6",
+   "name": "Completed DQE",
+   "mandatory": true,
+   "notes": "Quantities unchanged; hours = proposal",
+   "kind": "price",
+   "alt": false
+  },
+  {
+   "id": "D7",
+   "name": "Acte d'engagement (AE) — tender form",
+   "mandatory": true,
+   "notes": "Signed",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D8",
+   "name": "Site-visit certificate",
+   "mandatory": true,
+   "notes": "Signed by the buyer",
+   "kind": "visit",
+   "alt": false
+  },
+  {
+   "id": "D9",
+   "name": "Social-security (URSSAF) and tax certificates",
+   "mandatory": true,
+   "notes": "Less than 6 months old",
+   "kind": "file",
+   "alt": false
+  },
+  {
+   "id": "D10",
+   "name": "Professional liability insurance certificate",
+   "mandatory": true,
+   "notes": "Valid",
+   "kind": "file",
+   "alt": false
+  },
+  {
+   "id": "D11",
+   "name": "Staff-transfer plan (appendix 5)",
+   "mandatory": true,
+   "notes": "14 staff listed",
+   "kind": "file",
+   "alt": false
+  },
+  {
+   "id": "D12",
+   "name": "Product data sheets and SDS",
+   "mandatory": true,
+   "notes": "For every product cited",
+   "kind": "file",
+   "alt": false
+  }
+ ],
+ "alerts": [
+  {
+   "level": "warn",
+   "text": "Site visit is mandatory — without the certificate the bid is non-compliant (RC p.5)."
+  },
+  {
+   "level": "warn",
+   "text": "Proposal hours must match DQE hours (RC p.10) — automatic check below."
+  },
+  {
+   "level": "info",
+   "text": "Incumbent staff transfer: 14 people listed in appendix 5."
+  },
+  {
+   "level": "info",
+   "text": "Imposed proposal template: keep the 5 sections in order."
+  }
+ ],
+ "company": "Brillance Val-Brumeux Services (fictional company)",
+ "company_desc": "past proposals, procedures, CVs, quality-control plan, product sheets",
+ "chunks": [
+  {
+   "id": "kb-memo-1",
+   "title": "Past proposal — Brume-sur-Lys town hall, office buildings (2025)",
+   "source": "memoires/mairie_brume_sur_lys_2025.docx",
+   "page": 4,
+   "tags": [
+    "frequencies",
+    "hours",
+    "offices",
+    "washrooms"
+   ],
+   "text": "Set-up for Brume-sur-Lys town hall (fictional): work from 6:00 to 8:30 and after 18:00, never with the public present. Offices three times a week, washrooms and touch points daily. 9 cleaners, 4,100 hours a year, supervisor on site in the morning."
+  },
+  {
+   "id": "kb-creche",
+   "title": "Protocol — Early-childhood settings",
+   "source": "procedures/protocole_petite_enfance.pdf",
+   "page": 2,
+   "tags": [
+    "nursery",
+    "allergens",
+    "toys",
+    "steam"
+   ],
+   "text": "Fragrance- and allergen-free products approved with the nursery management. Weekly steam disinfection of toys and mats, no chemicals. Staff trained on the early-childhood protocol before assignment. Cleaning after the children leave."
+  },
+  {
+   "id": "kb-vitrerie",
+   "title": "Method statement — Windows and work at height",
+   "source": "procedures/vitrerie_hauteur.pdf",
+   "page": 1,
+   "tags": [
+    "windows",
+    "height",
+    "pole",
+    "lift"
+   ],
+   "text": "Pure-water pole up to 12 m from the ground. Above that, a lift operated by our usual subcontractor, declared on a DC4. Area cordoned off and prevention plan agreed with the buyer before each job."
+  },
+  {
+   "id": "kb-reprise",
+   "title": "Procedure — Staff transfer (cleaning collective agreement)",
+   "source": "rh/procedure_reprise_personnel.pdf",
+   "page": 3,
+   "tags": [
+    "staff transfer",
+    "collective agreement",
+    "seniority"
+   ],
+   "text": "Transfer timeline from D-30 to D0: staff briefing, one-to-one interview, contract amendment, seniority and pay kept as the sector agreement requires. An HR contact follows each file until the first payslip."
+  },
+  {
+   "id": "kb-cv-lead",
+   "title": "CV — Nadia Ferreira, lead supervisor",
+   "source": "rh/cv_nadia_ferreira.pdf",
+   "page": 1,
+   "tags": [
+    "supervisor",
+    "team lead",
+    "public sites"
+   ],
+   "text": "Nadia Ferreira (fictional person): 12 years in cleaning, 7 as team lead on public sites. Manages up to 15 cleaners. Reachable 6:00–19:00. Trained in early-childhood protocols and quality control."
+  },
+  {
+   "id": "kb-remplacement",
+   "title": "Organisation — Cover pool",
+   "source": "organisation/pool_remplacement.pdf",
+   "page": 2,
+   "tags": [
+    "absence",
+    "cover",
+    "relief staff"
+   ],
+   "text": "Pool of 6 relief cleaners in the Val-Brumeux area. Cover from the first day of absence; replacement on site on average 2 h after the alert in 2025 (fictional internal figure)."
+  },
+  {
+   "id": "kb-qualite",
+   "title": "Quality-control plan — grids and self-checks",
+   "source": "qualite/plan_controle.pdf",
+   "page": 5,
+   "tags": [
+    "quality control",
+    "grid",
+    "deviations",
+    "traceability"
+   ],
+   "text": "Inspection grid per zone scored 0 to 3. Weekly self-check by the team lead, monthly visit by the area manager, quarterly joint inspection with the client. Every deviation fixed within 24 working hours and logged in the tracking app."
+  },
+  {
+   "id": "kb-ecolabel",
+   "title": "Sheet — Product range and dosing",
+   "source": "achats/produits_ecolabel.pdf",
+   "page": 1,
+   "tags": [
+    "ecolabel",
+    "products",
+    "dilution",
+    "SDS"
+   ],
+   "text": "86% of products used in 2025 carry the EU Ecolabel. Dilution stations for exact dosing, washable microfibre. Data sheets and safety data sheets kept up to date for each product."
+  },
+  {
+   "id": "kb-dechets",
+   "title": "Instructions — Waste sorting and bins",
+   "source": "procedures/tri_dechets.pdf",
+   "page": 1,
+   "tags": [
+    "waste",
+    "sorting",
+    "bins"
+   ],
+   "text": "Bins emptied daily, waste sorted by stream (paper, packaging, general waste), colour-coded bags. Each site's rules are posted in the cleaning room."
+  },
+  {
+   "id": "kb-insertion",
+   "title": "Partnership — Employment inclusion",
+   "source": "rse/partenariat_insertion.pdf",
+   "page": 1,
+   "tags": [
+    "inclusion",
+    "social clause"
+   ],
+   "text": "Partnership with the Tremplin Brumeux association (fictional): 7% of hours in 2025 performed by people on an inclusion pathway, mentored by an experienced cleaner."
+  },
+  {
+   "id": "kb-ref-1",
+   "title": "Reference — Port-Brumeux library and nursery (2023–2026)",
+   "source": "references/ref_port_brumeux.pdf",
+   "page": 1,
+   "tags": [
+    "reference",
+    "nursery",
+    "library"
+   ],
+   "text": "Client: Port-Brumeux town (fictional). Cleaning of a library and a 40-cot nursery, 2,900 hours a year, no penalties over 3 years. Contact: facilities department."
+  }
+ ],
+ "chips": [
+  "staff transfer",
+  "nursery",
+  "windows",
+  "absence cover",
+  "quality control",
+  "ecolabel"
+ ],
+ "firstQuery": "staff transfer",
+ "sections": {
+  "C1": {
+   "title": "Section 1 — Organisation and staffing",
+   "bullets": [
+    {
+     "text": "Work from 6:00 to 8:30 and after 18:00, never with the public present, as already in place at Brume-sur-Lys town hall.",
+     "cite": "kb-memo-1"
+    },
+    {
+     "text": "Transfer of the 14 staff in appendix 5 under our procedure: briefing, one-to-one interview, amendment, seniority kept, from D-30 to D0.",
+     "cite": "kb-reprise"
+    },
+    {
+     "text": "Cover from the first day of absence thanks to a pool of 6 relief cleaners.",
+     "cite": "kb-remplacement"
+    }
+   ]
+  },
+  "C2": {
+   "title": "Section 2 — Method, frequencies and protocols",
+   "bullets": [
+    {
+     "text": "Offices three times a week; washrooms and touch points daily, Monday to Friday (CCTP art. 4.2).",
+     "cite": "kb-memo-1"
+    },
+    {
+     "text": "“Les Hirondelles” nursery: early-childhood protocol, fragrance- and allergen-free products, weekly steam disinfection of toys.",
+     "cite": "kb-creche"
+    },
+    {
+     "text": "Windows twice a year: pure-water pole up to 12 m, lift above that through our usual subcontractor declared on a DC4.",
+     "cite": "kb-vitrerie"
+    }
+   ]
+  },
+  "C3": {
+   "title": "Section 3 — Quality control and traceability",
+   "bullets": [
+    {
+     "text": "Zone grid scored 0 to 3: weekly self-check, monthly area-manager visit, quarterly joint inspection.",
+     "cite": "kb-qualite"
+    },
+    {
+     "text": "Every deviation fixed within 24 working hours and logged in the tracking app, visible to the buyer.",
+     "cite": "kb-qualite"
+    }
+   ]
+  },
+  "C4": {
+   "title": "Section 4 — Environmental and social approach",
+   "bullets": [
+    {
+     "text": "Dilution stations and washable microfibre; safety data sheets attached for every product.",
+     "cite": "kb-ecolabel"
+    },
+    {
+     "text": "Waste sorted according to each site's rules, bins emptied daily.",
+     "cite": "kb-dechets"
+    },
+    {
+     "text": "Inclusion clause: at least 5% of hours, with partner association Tremplin Brumeux (fictional).",
+     "cite": "kb-insertion"
+    }
+   ]
+  },
+  "C5": {
+   "title": "Section 5 — Price",
+   "bullets": [
+    {
+     "text": "DQE completed without changing quantities; the hours stated in this proposal are those of the DQE.",
+     "cite": null
+    }
+   ]
+  }
+ },
+ "form": {
+  "fields": [
+   {
+    "id": "price",
+    "label": "Annual DQE amount (€ excl. VAT)",
+    "type": "money",
+    "value": 168400,
+    "min": 0,
+    "step": 100
+   },
+   {
+    "id": "hours_memo",
+    "label": "Annual hours stated in the proposal",
+    "type": "number",
+    "value": 6240,
+    "min": 0,
+    "step": 10
+   },
+   {
+    "id": "hours_dqe",
+    "label": "Annual hours priced in the DQE",
+    "type": "number",
+    "value": 6240,
+    "min": 0,
+    "step": 10
+   },
+   {
+    "id": "lead",
+    "label": "Lead supervisor",
+    "type": "select",
+    "value": "Nadia Ferreira",
+    "options": [
+     [
+      "Nadia Ferreira",
+      "Nadia Ferreira (12 yrs)"
+     ],
+     [
+      "Other",
+      "Other (fill in the DOCX)"
+     ]
+    ]
+   },
+   {
+    "id": "eco",
+    "label": "Share of eco-labelled products (%)",
+    "type": "number",
+    "value": 86,
+    "min": 0,
+    "max": 100,
+    "step": 1
+   },
+   {
+    "id": "visit",
+    "label": "Site visit",
+    "type": "select",
+    "value": "yes",
+    "options": [
+     [
+      "yes",
+      "Done — attach certificate"
+     ],
+     [
+      "no",
+      "Not done yet"
+     ]
+    ]
+   }
+  ],
+  "notesCrit": "C1",
+  "notes": "Site visit done on 04/11/2026. One-to-one interview with each of the 14 transferred staff before start."
+ },
+ "formBullets": {
+  "C1": [
+   {
+    "tpl": "Lead supervisor: {lead}, reachable 6:00–19:00.",
+    "cite": "kb-cv-lead",
+    "citeIf": [
+     "lead",
+     "Nadia Ferreira"
+    ]
+   },
+   {
+    "tpl": "Annual hours stated: {hours_memo} hours."
+   }
+  ],
+  "C4": [
+   {
+    "tpl": "Committed share of eco-labelled products: {eco}%.",
+    "cite": "kb-ecolabel"
+   }
+  ],
+  "C5": [
+   {
+    "tpl": "Annual DQE amount: {price}. Prices are entered by the bidder, never calculated by the AI."
+   }
+  ]
+ },
+ "checks": [
+  {
+   "id": "hours",
+   "op": "eqf",
+   "field": "hours_memo",
+   "other": "hours_dqe",
+   "label": "Proposal hours = DQE hours",
+   "ref": "RC p.10",
+   "ok": "Consistent: {hours_memo} h in the proposal and the DQE.",
+   "ko": "Gap: {hours_memo} h in the proposal vs {hours_dqe} h in the DQE — fix before submitting."
+  },
+  {
+   "id": "eco",
+   "op": "ge",
+   "field": "eco",
+   "value": 80,
+   "label": "Eco-labelled products ≥ 80%",
+   "ref": "CCTP p.27",
+   "ok": "{eco}% eco-labelled products (80% required).",
+   "ko": "Only {eco}% — the CCTP requires at least 80%."
+  },
+  {
+   "id": "visit",
+   "op": "eq",
+   "field": "visit",
+   "value": "yes",
+   "label": "Site-visit certificate",
+   "ref": "RC p.5",
+   "ok": "Visit done — attach the certificate.",
+   "ko": "Visit not done — the bid would be non-compliant."
+  },
+  {
+   "id": "lead",
+   "op": "ne",
+   "field": "lead",
+   "value": "Other",
+   "label": "Supervisor named",
+   "ref": "CCTP p.11",
+   "ok": "Named: {lead}.",
+   "ko": "Name a supervisor in the proposal."
+  }
+ ],
+ "file": "CAVB-2026-PROP-07_technical_proposal_draft"
+}

@@ -1,0 +1,781 @@
+{
+ "id": "securite",
+ "name": "Security",
+ "icon": "shield",
+ "h1": "guarding and fire safety, proposal ready to review",
+ "lead": "Posts, patrols, alarm response, CNAPS licences and staff transfer: every requirement linked to its clause.",
+ "meta": {
+  "tender_id": "VVB-2026-SEC-03",
+  "title": "Guarding, reception-security and fire safety for the cultural centre and media library",
+  "buyer": "Town of Val-Brumeux (fictional)",
+  "procedure": "Open procedure — standard contract, single lot",
+  "cpv": "79713000 — Guard services",
+  "term": "3 years",
+  "source_files": [
+   {
+    "name": "RC.pdf",
+    "type": "Rules (RC)",
+    "pages": 14
+   },
+   {
+    "name": "CCAP.pdf",
+    "type": "Admin terms (CCAP)",
+    "pages": 20
+   },
+   {
+    "name": "CCTP.pdf",
+    "type": "Tech. specs (CCTP)",
+    "pages": 32
+   },
+   {
+    "name": "Consignes_de_poste.pdf",
+    "type": "Post orders",
+    "pages": 12
+   },
+   {
+    "name": "Cadre_memoire.docx",
+    "type": "Imposed template",
+    "pages": 3
+   },
+   {
+    "name": "BPU_horaire.xlsx",
+    "type": "BPU",
+    "pages": 2
+   },
+   {
+    "name": "DQE.xlsx",
+    "type": "DQE",
+    "pages": 2
+   }
+  ]
+ },
+ "fly": [
+  "RC.pdf",
+  "CCTP.pdf",
+  "Post_orders.pdf",
+  "BPU_hourly.xlsx"
+ ],
+ "pieces": "RC · CCAP · CCTP · post orders · hourly BPU · DQE",
+ "cadre": {
+  "name": "Imposed proposal template (RC appendix 3)",
+  "note": "5 sections kept in the buyer's order."
+ },
+ "value": {
+  "rows": [
+   [
+    "Reading the tender pack and post orders",
+    "≈ 6 h",
+    "≈ 1 h of review"
+   ],
+   [
+    "First draft in the imposed template",
+    "≈ 16 h",
+    "≈ 3 h 30 of review and edits"
+   ],
+   [
+    "Checking documents (CNAPS, DC1, DC2…)",
+    "≈ 2 h 30",
+    "≈ 30 min"
+   ]
+  ],
+  "total": [
+   "≈ 24 h 30",
+   "≈ 5 h"
+  ]
+ },
+ "deadlines": [
+  {
+   "label": "Questions deadline",
+   "date": "10/11/2026",
+   "time": "12:00",
+   "tz": "local time"
+  },
+  {
+   "label": "Bid deadline",
+   "date": "24/11/2026",
+   "time": "12:00",
+   "tz": "local time"
+  },
+  {
+   "label": "Bid validity",
+   "date": "23/04/2027",
+   "note": "150 days"
+  },
+  {
+   "label": "Planned start",
+   "date": "01/03/2027",
+   "note": "Indicative"
+  }
+ ],
+ "scoring": [
+  {
+   "id": "C1",
+   "name": "Posts and patrol organisation",
+   "weight": 25,
+   "description": "Fixed posts, patrols, electronic log, fit with site hours."
+  },
+  {
+   "id": "C2",
+   "name": "Officer qualifications and supervision",
+   "weight": 20,
+   "description": "CNAPS licences, SSIAP fire-safety levels, site manager, site induction."
+  },
+  {
+   "id": "C3",
+   "name": "Alarm response",
+   "weight": 15,
+   "description": "Response time, incident reports, remote monitoring."
+  },
+  {
+   "id": "C4",
+   "name": "Staff transfer and continuity",
+   "weight": 10,
+   "description": "Transfer of incumbent officers, cover, on-call."
+  },
+  {
+   "id": "C5",
+   "name": "Price",
+   "weight": 30,
+   "description": "Hourly BPU per grade and annual DQE simulation."
+  }
+ ],
+ "requirements": [
+  {
+   "id": "E01",
+   "category": "Posts",
+   "text": "Reception-security post from 9:00 to 19:00, Tuesday to Saturday; one SSIAP 1 fire-safety officer present for all public opening hours.",
+   "source": "CCTP.pdf",
+   "page": 6,
+   "art": "Art. 3.1",
+   "criterion": "C1",
+   "kb": "kb-memo-1",
+   "check": "ssiap"
+  },
+  {
+   "id": "E02",
+   "category": "Patrols",
+   "text": "Night patrols every 2 h from 20:00 to 6:00, checked with tags and recorded in an electronic log.",
+   "source": "CCTP.pdf",
+   "page": 8,
+   "art": "Art. 3.4",
+   "criterion": "C1",
+   "kb": "kb-rondes",
+   "check": null
+  },
+  {
+   "id": "E03",
+   "category": "CNAPS",
+   "text": "Every officer holds a valid CNAPS professional licence; copy supplied before taking up the post.",
+   "source": "CCAP.pdf",
+   "page": 5,
+   "art": "Art. 4.2",
+   "criterion": "C2",
+   "kb": "kb-cnaps",
+   "check": null
+  },
+  {
+   "id": "E04",
+   "category": "CNAPS",
+   "text": "The company and its directors hold the CNAPS operating authorisation.",
+   "source": "RC.pdf",
+   "page": 7,
+   "art": "Art. 6.1",
+   "criterion": "C2",
+   "kb": "kb-autorisation",
+   "check": null
+  },
+  {
+   "id": "E05",
+   "category": "Fire safety",
+   "text": "Fire-safety officers qualified SSIAP 1, team leader SSIAP 2, refresher training up to date.",
+   "source": "CCTP.pdf",
+   "page": 11,
+   "art": "Art. 5",
+   "criterion": "C2",
+   "kb": "kb-ssiap",
+   "check": null
+  },
+  {
+   "id": "E06",
+   "category": "Alarm response",
+   "text": "Alarm response with on-site verification in under 30 minutes, 24/7.",
+   "source": "CCTP.pdf",
+   "page": 15,
+   "art": "Art. 7.2",
+   "criterion": "C3",
+   "kb": "kb-levee",
+   "check": "delay"
+  },
+  {
+   "id": "E07",
+   "category": "Reports",
+   "text": "Written report to the buyer within 24 h of any incident.",
+   "source": "CCTP.pdf",
+   "page": 16,
+   "art": "Art. 7.4",
+   "criterion": "C3",
+   "kb": "kb-levee",
+   "check": null
+  },
+  {
+   "id": "E08",
+   "category": "Staff transfer",
+   "text": "Staff transfer under the security-sector collective agreement (IDCC 1351); 5 officers concerned, list in appendix 4.",
+   "source": "CCAP.pdf",
+   "page": 8,
+   "art": "Art. 6",
+   "criterion": "C4",
+   "kb": "kb-reprise",
+   "check": null
+  },
+  {
+   "id": "E09",
+   "category": "Continuity",
+   "text": "Any absent officer is replaced within 2 h; no shift left uncovered.",
+   "source": "CCAP.pdf",
+   "page": 10,
+   "art": "Art. 7.1",
+   "criterion": "C4",
+   "kb": "kb-continuite",
+   "check": null
+  },
+  {
+   "id": "E10",
+   "category": "Site induction",
+   "text": "Each officer is trained on the site orders before taking up the post (minimum 4 h shadowing).",
+   "source": "Consignes_de_poste.pdf",
+   "page": 2,
+   "art": "§ 1.3",
+   "criterion": "C2",
+   "kb": "kb-doublure",
+   "check": null
+  },
+  {
+   "id": "E11",
+   "category": "Subcontracting",
+   "text": "Remote monitoring may be subcontracted after declaration (DC4) and buyer approval.",
+   "source": "RC.pdf",
+   "page": 11,
+   "art": "Art. 9",
+   "criterion": "C3",
+   "kb": "kb-telesurv",
+   "check": null
+  },
+  {
+   "id": "E12",
+   "category": "Price",
+   "text": "Hourly BPU per grade (guard, SSIAP 1, SSIAP 2) with night, Sunday and public-holiday uplifts; annual DQE simulation completed without changing quantities.",
+   "source": "RC.pdf",
+   "page": 9,
+   "art": "Art. 8",
+   "criterion": "C5",
+   "kb": null,
+   "check": "rates"
+  },
+  {
+   "id": "E13",
+   "category": "Uniform",
+   "text": "Identifiable uniform marked “Sécurité”; professional licence visible at all times.",
+   "source": "Consignes_de_poste.pdf",
+   "page": 4,
+   "art": "§ 2.1",
+   "criterion": "C2",
+   "kb": null,
+   "check": null
+  }
+ ],
+ "required_documents": [
+  {
+   "id": "D1",
+   "name": "DC1 — Application letter",
+   "mandatory": true,
+   "notes": "Official form, signed; or DUME",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D2",
+   "name": "DC2 — Bidder declaration",
+   "mandatory": true,
+   "notes": "Financial, technical and professional capacity; or DUME",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D3",
+   "name": "DUME — European Single Procurement Document (ESPD)",
+   "mandatory": false,
+   "notes": "Accepted instead of DC1 + DC2",
+   "kind": "form",
+   "alt": true
+  },
+  {
+   "id": "D4",
+   "name": "DC4 — Subcontracting declaration",
+   "mandatory": false,
+   "notes": "If remote monitoring is subcontracted",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D5",
+   "name": "Technical proposal (imposed template, appendix 3)",
+   "mandatory": true,
+   "notes": "All 5 sections, in order",
+   "kind": "memo",
+   "alt": false
+  },
+  {
+   "id": "D6",
+   "name": "Completed hourly BPU",
+   "mandatory": true,
+   "notes": "Guard, SSIAP 1, SSIAP 2 + uplifts",
+   "kind": "price",
+   "alt": false
+  },
+  {
+   "id": "D7",
+   "name": "Completed DQE",
+   "mandatory": true,
+   "notes": "Quantities unchanged",
+   "kind": "price",
+   "alt": false
+  },
+  {
+   "id": "D8",
+   "name": "Acte d'engagement (AE) — tender form",
+   "mandatory": true,
+   "notes": "Signed",
+   "kind": "form",
+   "alt": false
+  },
+  {
+   "id": "D9",
+   "name": "CNAPS operating authorisation (company)",
+   "mandatory": true,
+   "notes": "Plus directors' approvals",
+   "kind": "file",
+   "alt": false
+  },
+  {
+   "id": "D10",
+   "name": "Social-security (URSSAF) and tax certificates",
+   "mandatory": true,
+   "notes": "Less than 6 months old",
+   "kind": "file",
+   "alt": false
+  },
+  {
+   "id": "D11",
+   "name": "Professional liability insurance certificate",
+   "mandatory": true,
+   "notes": "Valid",
+   "kind": "file",
+   "alt": false
+  },
+  {
+   "id": "D12",
+   "name": "References for comparable sites",
+   "mandatory": true,
+   "notes": "Last 3 years, with contacts",
+   "kind": "file",
+   "alt": false
+  },
+  {
+   "id": "D13",
+   "name": "Site manager CV",
+   "mandatory": true,
+   "notes": "SSIAP 2 required",
+   "kind": "lead",
+   "alt": false
+  }
+ ],
+ "alerts": [
+  {
+   "level": "warn",
+   "text": "SSIAP 1 required for all public opening hours (CCTP p.6)."
+  },
+  {
+   "level": "warn",
+   "text": "Transfer of 5 officers (IDCC 1351) — build the transfer timeline into the start-up."
+  },
+  {
+   "level": "info",
+   "text": "Alarm response under 30 min: scored under criterion C3."
+  },
+  {
+   "level": "info",
+   "text": "Remote monitoring can be subcontracted: plan the DC4."
+  }
+ ],
+ "company": "Vigil'Brume Sécurité (fictional company)",
+ "company_desc": "past proposals, procedures, CNAPS register, training plans, CVs",
+ "chunks": [
+  {
+   "id": "kb-memo-1",
+   "title": "Past proposal — Brume-sur-Lys museum, reception-security and SSIAP (2024)",
+   "source": "memoires/musee_brume_sur_lys_2024.docx",
+   "page": 3,
+   "tags": [
+    "reception-security",
+    "SSIAP",
+    "public building",
+    "post"
+   ],
+   "text": "For Brume-sur-Lys museum (fictional): reception-security post during opening hours, one SSIAP 1 officer permanently at the fire-safety desk, bag checks at peak times, electronic log shared with the venue team."
+  },
+  {
+   "id": "kb-rondes",
+   "title": "Procedure — Night patrols and electronic log",
+   "source": "procedures/rondes_nuit.pdf",
+   "page": 2,
+   "tags": [
+    "patrols",
+    "night",
+    "tags",
+    "log"
+   ],
+   "text": "Patrols every 2 h on varied routes, NFC tags at each sensitive point. Any anomaly entered in the electronic log with photo and time; the client has read access."
+  },
+  {
+   "id": "kb-cnaps",
+   "title": "Register — Officers' CNAPS professional licences",
+   "source": "rh/registre_cartes_cnaps.xlsx",
+   "page": 1,
+   "tags": [
+    "licence",
+    "CNAPS",
+    "validity"
+   ],
+   "text": "Register of 42 (fictional) officers with licence number, expiry date and automatic alert 90 days before expiry. Copy given to the client before each new posting."
+  },
+  {
+   "id": "kb-autorisation",
+   "title": "CNAPS operating authorisation — company and directors",
+   "source": "admin/autorisation_cnaps.pdf",
+   "page": 1,
+   "tags": [
+    "operating authorisation",
+    "CNAPS",
+    "directors"
+   ],
+   "text": "Company operating authorisation and directors' approvals (fictional numbers for the demo), valid, attached to every application."
+  },
+  {
+   "id": "kb-ssiap",
+   "title": "Training plan — SSIAP 1 and 2, refreshers",
+   "source": "formation/plan_ssiap.pdf",
+   "page": 4,
+   "tags": [
+    "SSIAP",
+    "refresher",
+    "fire safety"
+   ],
+   "text": "SSIAP refresher schedule over 3 years, skills maintenance run in-house. SSIAP 2 team leaders on every site with more than 300 visitors."
+  },
+  {
+   "id": "kb-cv-lead",
+   "title": "CV — Karim Benali, SSIAP 2 site manager",
+   "source": "rh/cv_karim_benali.pdf",
+   "page": 1,
+   "tags": [
+    "site manager",
+    "SSIAP 2",
+    "supervision"
+   ],
+   "text": "Karim Benali (fictional person): 10 years in public-venue security, SSIAP 2 site manager for 6 years, leads up to 12 officers, runs evacuation drills."
+  },
+  {
+   "id": "kb-levee",
+   "title": "Flowchart — Alarm response and on-site verification",
+   "source": "procedures/levee_de_doute.pdf",
+   "page": 1,
+   "tags": [
+    "alarm response",
+    "alarm",
+    "intervention",
+    "report"
+   ],
+   "text": "Alarm received → call to site → mobile patrol dispatched → on-site verification → site secured → written report to the client within 24 h. Average arrival time in 2025: 18 minutes (fictional internal figure)."
+  },
+  {
+   "id": "kb-reprise",
+   "title": "Procedure — Staff transfer (security-sector agreement)",
+   "source": "rh/reprise_personnel_securite.pdf",
+   "page": 2,
+   "tags": [
+    "staff transfer",
+    "IDCC 1351",
+    "transfer"
+   ],
+   "text": "Steps: receive the outgoing contractor's list, brief the officers, one-to-one interview, licence check, contract amendment, seniority kept. Timeline aligned on the start date."
+  },
+  {
+   "id": "kb-continuite",
+   "title": "Continuity plan — cover within 2 h",
+   "source": "organisation/plan_continuite.pdf",
+   "page": 1,
+   "tags": [
+    "cover",
+    "continuity",
+    "on-call"
+   ],
+   "text": "Pool of 8 officers trained on several sites' orders, 24/7 supervisory on-call. Internal target: replacement on post within 2 h."
+  },
+  {
+   "id": "kb-doublure",
+   "title": "Sheet — Site-order induction (shadowing)",
+   "source": "formation/doublure_site.pdf",
+   "page": 1,
+   "tags": [
+    "shadowing",
+    "site orders",
+    "induction"
+   ],
+   "text": "Each new officer shadows a regular officer for at least 4 h, then answers a quiz on general and specific orders, signed off by the site manager."
+  },
+  {
+   "id": "kb-telesurv",
+   "title": "Framework contract — Remote monitoring (declared subcontractor)",
+   "source": "contrats/telesurveillance.pdf",
+   "page": 2,
+   "tags": [
+    "remote monitoring",
+    "subcontracting",
+    "DC4"
+   ],
+   "text": "Remote monitoring by a usual (fictional) subcontractor, declared on a DC4 for each contract and subject to buyer approval. Alarm hand-off protocol to our mobile patrol."
+  }
+ ],
+ "chips": [
+  "alarm response",
+  "SSIAP",
+  "CNAPS licence",
+  "staff transfer",
+  "night patrols",
+  "cover"
+ ],
+ "firstQuery": "alarm response",
+ "sections": {
+  "C1": {
+   "title": "Section 1 — Posts and patrol organisation",
+   "bullets": [
+    {
+     "text": "Reception-security post from 9:00 to 19:00, Tuesday to Saturday, on the model already running at Brume-sur-Lys museum.",
+     "cite": "kb-memo-1"
+    },
+    {
+     "text": "Night patrols every 2 h from 20:00 to 6:00, NFC tags and an electronic log the buyer can read.",
+     "cite": "kb-rondes"
+    }
+   ]
+  },
+  "C2": {
+   "title": "Section 2 — Officer qualifications and supervision",
+   "bullets": [
+    {
+     "text": "CNAPS licences tracked in a register with an alert 90 days before expiry; copies supplied before each posting.",
+     "cite": "kb-cnaps"
+    },
+    {
+     "text": "Company operating authorisation and directors' approvals attached.",
+     "cite": "kb-autorisation"
+    },
+    {
+     "text": "SSIAP 1 officers, SSIAP 2 team leader, refreshers scheduled.",
+     "cite": "kb-ssiap"
+    },
+    {
+     "text": "At least 4 h shadowing on the site orders before any posting.",
+     "cite": "kb-doublure"
+    }
+   ]
+  },
+  "C3": {
+   "title": "Section 3 — Alarm response",
+   "bullets": [
+    {
+     "text": "Alarm response by mobile patrol, following our verification flowchart.",
+     "cite": "kb-levee"
+    },
+    {
+     "text": "Written report to the buyer within 24 h of any incident.",
+     "cite": "kb-levee"
+    },
+    {
+     "text": "Remote monitoring by our usual subcontractor, declared on a DC4 and subject to buyer approval.",
+     "cite": "kb-telesurv"
+    }
+   ]
+  },
+  "C4": {
+   "title": "Section 4 — Staff transfer and continuity",
+   "bullets": [
+    {
+     "text": "Transfer of the 5 officers in appendix 4 under the sector agreement: briefing, interview, licence check, amendment, seniority kept.",
+     "cite": "kb-reprise"
+    },
+    {
+     "text": "Cover within 2 h thanks to a pool of 8 officers and 24/7 supervisory on-call.",
+     "cite": "kb-continuite"
+    }
+   ]
+  },
+  "C5": {
+   "title": "Section 5 — Price",
+   "bullets": [
+    {
+     "text": "Hourly BPU completed per grade, with night, Sunday and public-holiday uplifts; DQE completed without changing quantities.",
+     "cite": null
+    }
+   ]
+  }
+ },
+ "form": {
+  "fields": [
+   {
+    "id": "price",
+    "label": "Annual DQE amount (€ excl. VAT)",
+    "type": "money",
+    "value": 312600,
+    "min": 0,
+    "step": 100
+   },
+   {
+    "id": "rate_ads",
+    "label": "Guard hourly rate (€ excl. VAT)",
+    "type": "rate",
+    "value": 27.4,
+    "min": 0,
+    "step": 0.1
+   },
+   {
+    "id": "rate_ssiap",
+    "label": "SSIAP 1 hourly rate (€ excl. VAT)",
+    "type": "rate",
+    "value": 29.8,
+    "min": 0,
+    "step": 0.1
+   },
+   {
+    "id": "lead",
+    "label": "Site manager",
+    "type": "select",
+    "value": "Karim Benali",
+    "options": [
+     [
+      "Karim Benali",
+      "Karim Benali (SSIAP 2, 10 yrs)"
+     ],
+     [
+      "Other",
+      "Other (fill in the DOCX)"
+     ]
+    ]
+   },
+   {
+    "id": "delay",
+    "label": "Proposed alarm response time (min)",
+    "type": "number",
+    "value": 25,
+    "min": 1,
+    "max": 120,
+    "step": 1
+   },
+   {
+    "id": "ssiap",
+    "label": "SSIAP 1 for all opening hours?",
+    "type": "select",
+    "value": "yes",
+    "options": [
+     [
+      "yes",
+      "Yes"
+     ],
+     [
+      "no",
+      "No"
+     ]
+    ]
+   }
+  ],
+  "notesCrit": "C4",
+  "notes": "Transfer of the 5 officers in appendix 4: interviews planned 3 weeks before start."
+ },
+ "formBullets": {
+  "C1": [
+   {
+    "tpl": "One SSIAP 1 officer present for all public opening hours.",
+    "when": [
+     "ssiap",
+     "yes"
+    ],
+    "cite": "kb-memo-1"
+   }
+  ],
+  "C2": [
+   {
+    "tpl": "Named site manager: {lead}.",
+    "cite": "kb-cv-lead",
+    "citeIf": [
+     "lead",
+     "Karim Benali"
+    ]
+   }
+  ],
+  "C3": [
+   {
+    "tpl": "Committed alarm response time: {delay} minutes (CCTP maximum: 30).",
+    "cite": "kb-levee"
+   }
+  ],
+  "C5": [
+   {
+    "tpl": "Annual DQE amount: {price}; hourly rates entered: guard {rate_ads}, SSIAP 1 {rate_ssiap}. Prices come from the bidder, never from the AI."
+   }
+  ]
+ },
+ "checks": [
+  {
+   "id": "delay",
+   "op": "le",
+   "field": "delay",
+   "value": 30,
+   "label": "Alarm response ≤ 30 min",
+   "ref": "CCTP p.15",
+   "ok": "{delay} min proposed (maximum 30).",
+   "ko": "{delay} min — above the 30 min required."
+  },
+  {
+   "id": "ssiap",
+   "op": "eq",
+   "field": "ssiap",
+   "value": "yes",
+   "label": "SSIAP 1 during opening hours",
+   "ref": "CCTP p.6",
+   "ok": "SSIAP 1 presence covered.",
+   "ko": "SSIAP 1 presence not covered — CCTP requirement."
+  },
+  {
+   "id": "rates",
+   "op": "gef",
+   "field": "rate_ssiap",
+   "other": "rate_ads",
+   "label": "SSIAP 1 rate ≥ guard rate",
+   "ref": "RC p.9",
+   "ok": "Consistent rates: SSIAP 1 {rate_ssiap} ≥ guard {rate_ads}.",
+   "ko": "SSIAP 1 rate ({rate_ssiap}) below guard rate ({rate_ads}) — check."
+  },
+  {
+   "id": "lead",
+   "op": "ne",
+   "field": "lead",
+   "value": "Other",
+   "label": "Site manager named",
+   "ref": "CCTP p.11",
+   "ok": "Site manager: {lead}.",
+   "ko": "Name a site manager."
+  }
+ ],
+ "file": "VVB-2026-SEC-03_technical_proposal_draft"
+}
