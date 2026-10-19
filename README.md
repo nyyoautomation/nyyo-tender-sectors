@@ -25,4 +25,4 @@ This repository holds only the public static demo. The code of the real tool is 
 
 Online first, isolated workspace, EU or US hosting / data region of your choice. A local version is available as an option ([free installation kit](./install-kit/)). Remote · Worldwide. Pricing on quote.
 
-Contact: LaborX (https://laborx.com/freelancers/users/id475124)
+Available on LaborX · [Profile](https://github.com/nyyoautomation)
