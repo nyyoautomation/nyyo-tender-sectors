@@ -4,15 +4,13 @@
   const LANG = /^fr/i.test(document.documentElement.lang || "") ? "fr" : "en";
   const BASE = document.body.dataset.base || "./data/" + LANG + "/";
   const ORDER = ["proprete", "securite", "it", "formation"];
-  const loc = LANG === "fr" ? "fr-FR" : "en-US";
+  const loc = "en-US";
 
   const STR = {
     fr: {
       required: "Obligatoire", optional: "Facultatif", alt: "Alternative", page: "p.",
       typeQuery: "Saisissez une recherche ou touchez une suggestion.", noMatch: "Aucun résultat — essayez un autre terme.",
       drafting: "Rédaction des rubriques à partir du cadre imposé et de vos anciens mémoires…",
-      money: (n) => Number(n).toLocaleString(loc) + " € HT",
-      rate: (n) => Number(n).toLocaleString(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " € HT/h",
       notes: "Engagements de l'entreprise : ",
       mapped: "Réponse proposée", gap: "Écart à corriger", review: "À vérifier",
       noSource: "Aucune pièce trouvée dans vos documents",
