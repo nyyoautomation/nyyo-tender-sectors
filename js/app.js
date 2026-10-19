@@ -1,45 +1,11 @@
 /* Nyyo multi-sector tender demo — static, browser-only assembly. Fictional data only. */
 (function () {
   "use strict";
-  const LANG = /^fr/i.test(document.documentElement.lang || "") ? "fr" : "en";
-  const BASE = document.body.dataset.base || "./data/" + LANG + "/";
+  const BASE = document.body.dataset.base || "./data/en/";
   const ORDER = ["proprete", "securite", "it", "formation"];
   const loc = "en-US";
 
   const STR = {
-    fr: {
-      required: "Obligatoire", optional: "Facultatif", alt: "Alternative", page: "p.",
-      typeQuery: "Saisissez une recherche ou touchez une suggestion.", noMatch: "Aucun résultat — essayez un autre terme.",
-      drafting: "Rédaction des rubriques à partir du cadre imposé et de vos anciens mémoires…",
-      notes: "Engagements de l'entreprise : ",
-      mapped: "Réponse proposée", gap: "Écart à corriger", review: "À vérifier",
-      noSource: "Aucune pièce trouvée dans vos documents",
-      chkMemo: "Brouillon généré dans cette démo", chkPrice: (m) => `Prix saisi : ${m}`, chkPriceNone: "Prix à saisir",
-      chkLead: (p) => `Nommé(e) : ${p}`, chkLeadNone: "Personne à nommer", chkForm: "Formulaire officiel à compléter et signer",
-      chkAlt: "Accepté à la place de DC1 + DC2", chkVisitOk: "Visite effectuée — joindre l'attestation", chkVisitKo: "Visite à faire",
-      attach: "À joindre depuis vos fichiers", formTag: "Formulaire",
-      gonogo: (c, t, list) => `<strong>${c}/${t} exigences</strong> déjà couvertes par vos documents ou vos saisies` + (list.length ? ` · <strong>${list.length} à vérifier</strong> : ${list.join(", ")}` : ""),
-      gonogoTitle: "Aide au Go / No-Go (exemple)",
-      checksOk: (n, t) => `${n}/${t} contrôles au vert`,
-      docxLoading: "La bibliothèque DOCX se charge encore — réessayez dans une seconde.",
-      docxTitle: "MÉMOIRE TECHNIQUE — BROUILLON À RELIRE",
-      docxHeader: "Brouillon — relecture humaine obligatoire · données fictives",
-      docxWarn: "RELECTURE HUMAINE OBLIGATOIRE — DCE fictif de démonstration. L'entreprise reste seule responsable de toute offre réelle. Les prix viennent de l'entreprise, jamais de l'IA.",
-      docxInfo: ["Acheteur", "Référence", "Procédure", "Durée", "Remise des offres", "Secteur", "Candidat"],
-      docxCadre: "Structure : ", docxChecks: "Contrôles avant dépôt", docxChkHdr: ["Contrôle", "Résultat", "Réf."],
-      matrix: "Matrice de conformité", hdr: ["Réf.", "Exigence (extrait du DCE)", "Statut", "Réponse sourcée"],
-      checklist: "Pièces à remettre (DC1, DC2, DUME, BPU / DQE…)", ckHdr: ["", "Pièce", "Statut"],
-      sources: "Annexe — sources citées", srcFrom: "Source : ",
-      footer: "Généré par la démo Nyyo Automation · données fictives · ne constitue pas un conseil juridique",
-      pageOf: ["Page ", " / "], docTitle: "Mémoire technique (brouillon)",
-      genFirst: "Générez d'abord le mémoire.", printTitle: "Mémoire technique — brouillon à relire",
-      printWarn: "RELECTURE HUMAINE OBLIGATOIRE — exemple fictif.", loadFail: "Échec du chargement des données de la démo : ",
-      dceExtract: "Extrait du DCE fictif", kbExtract: "Extrait de vos documents (fictifs)", close: "Fermer",
-      reqsFrom: "Exigences relevées dans cette pièce", openSrc: "Voir l'extrait",
-      vStats: (r, d, f, c) => [[r, "exigences repérées, chacune avec son article et sa page"], [d, "pièces listées, dont " + f], [c, "contrôles de cohérence avant dépôt"], ["Word", "mémoire au cadre imposé, prêt à relire"]],
-      title: (n) => `Appels d'offres ${n} — démo IA · Nyyo Automation`,
-      yes: "oui", no: "non",
-    },
     en: {
       required: "Required", optional: "Optional", alt: "Alternative", page: "p.",
       typeQuery: "Type a query or tap a suggestion.", noMatch: "No matches — try another term.",
@@ -76,8 +42,7 @@
       yes: "yes", no: "no",
     },
   };
-  const T = STR[LANG];
-  if (window.NyyoBM25 && window.NyyoBM25.setLang) window.NyyoBM25.setLang(LANG);
+  const T = STR.en;
 
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -174,7 +139,7 @@
     $$(".js-pieces").forEach((el) => (el.textContent = d.pieces));
     $("#kbCompany").textContent = d.company;
     $("#kbDesc").textContent = d.company_desc;
-    $("#kbQ").placeholder = (LANG === "fr" ? "Essayez : " : "Try: ") + d.chips.slice(0, 3).join(", ") + "…";
+    $("#kbQ").placeholder = "Try: " + d.chips.slice(0, 3).join(", ") + "…";
   }
 
   function renderValue() {
@@ -182,8 +147,8 @@
     $("#valueSector").textContent = d.name;
     $("#valueCase").textContent = d.meta.title;
     $("#valueRows").innerHTML = v.rows.map((r) => `<tr><td>${esc(r[0])}</td><td class="v-before">${nb(r[1])}</td><td class="v-after">${esc(r[2])}</td></tr>`).join("") +
-      `<tr class="v-total"><td>${LANG === "fr" ? "Total sur l'exemple" : "Total on the sample"}</td><td class="v-before">${nb(v.total[0])}</td><td class="v-after">${nb(v.total[1])}</td></tr>`;
-    const short = (n) => (/\(AE\)/.test(n) ? "AE" : n.split(" — ")[0].replace(/ \(.*\)$/, ""));
+      `<tr class="v-total"><td>Total on the sample</td><td class="v-before">${nb(v.total[0])}</td><td class="v-after">${nb(v.total[1])}</td></tr>`;
+    const short = (n) => n.split(" — ")[0].replace(/ \(.*\)$/, "");
     const forms = d.required_documents.filter((x) => x.kind === "form").map((x) => short(x.name));
     const price = [...new Set(d.required_documents.filter((x) => x.kind === "price").map((x) => x.name.split(" ")[0]))];
     const stats = T.vStats(d.requirements.length, d.required_documents.length, [...forms, ...price].join(", "), d.checks.length);
@@ -296,7 +261,7 @@
       const id = "f_" + f.id;
       if (f.type === "select") return `<div class="field"><label for="${id}">${esc(f.label)}</label><select id="${id}">${f.options.map((o) => `<option value="${esc(o[0])}"${o[0] === f.value ? " selected" : ""}>${esc(o[1])}</option>`).join("")}</select></div>`;
       return `<div class="field"><label for="${id}">${esc(f.label)}</label><input id="${id}" type="number" inputmode="decimal" value="${f.value}"${f.min != null ? ` min="${f.min}"` : ""}${f.max != null ? ` max="${f.max}"` : ""} step="${f.step || 1}" /></div>`;
-    }).join("") + `<div class="field full"><label for="f_notes">${LANG === "fr" ? "Engagements / remarques" : "Commitments / notes"}</label><textarea id="f_notes">${esc(d.form.notes)}</textarea></div>`;
+    }).join("") + `<div class="field full"><label for="f_notes">Commitments / notes</label><textarea id="f_notes">${esc(d.form.notes)}</textarea></div>`;
     $("#bidForm").oninput = () => { updateChecks(); if (st.packReady) { st.packReady = false; $("#staleNote").classList.remove("hidden"); } };
     updateChecks();
   }
@@ -414,7 +379,7 @@
     const rs = st.d.requirements.filter((x) => x.source === name).sort((a, b) => a.page - b.page);
     const f = st.d.meta.source_files.find((x) => x.name === name);
     openSource(`<p class="src-kicker">${T.dceExtract}</p><h3>${esc(name)}${f ? ` · ${esc(f.type)} · ${f.pages} ${T.page}` : ""}</h3>
-      ${rs.length ? rs.map((r) => `<blockquote class="src-quote"><span class="mono">${T.page}${r.page} · ${esc(r.art)}</span> ${esc(r.text)}</blockquote>`).join("") : `<p class="muted-p">${LANG === "fr" ? "Pièce financière ou annexe : aucune exigence rédactionnelle extraite ; les prix restent saisis par vous." : "Pricing file or appendix: no written requirement extracted; prices stay entered by you."}</p>`}`);
+      ${rs.length ? rs.map((r) => `<blockquote class="src-quote"><span class="mono">${T.page}${r.page} · ${esc(r.art)}</span> ${esc(r.text)}</blockquote>`).join("") : `<p class="muted-p">Pricing file or appendix: no written requirement extracted; prices stay entered by you.</p>`}`);
   }
   function showKb(id) {
     const d = kbDoc(id);
@@ -437,7 +402,7 @@
     const table = (widths, head, rows) => new Table({ width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths,
       rows: [...(head ? [new TableRow({ tableHeader: true, children: head.map((h, i) => cell(h, widths[i], { bold: true, fill: "E8EEF9" })) })] : []),
         ...rows.map((r) => new TableRow({ children: r.map((c, i) => (typeof c === "object" && c !== null ? cell(c.t, widths[i], c) : cell(c, widths[i]))) }))] });
-    const dl = d.deadlines.find((x) => /remise|bid deadline|submission/i.test(x.label));
+    const dl = d.deadlines.find((x) => /bid deadline|submission/i.test(x.label));
     const used = new Set();
     const children = [
       new Paragraph({ text: T.docxTitle, heading: HeadingLevel.TITLE }),
