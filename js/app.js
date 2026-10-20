@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   const BASE = document.body.dataset.base || "./data/en/";
-  const ORDER = ["proprete", "securite", "it", "formation"];
+  const ORDER = ["cleaning", "security", "it", "training"];
   const loc = "en-US";
 
   const STR = {
@@ -27,7 +27,7 @@
       docxHeader: "Draft — human review required · fictional data",
       docxWarn: "HUMAN REVIEW REQUIRED — fictional sample tender. The bidder remains solely responsible for any real submission. Prices come from the bidder, never from the AI.",
       docxInfo: ["Buyer", "Reference", "Procedure", "Term", "Bid deadline", "Sector", "Bidder"],
-      docxCadre: "Structure: ", docxChecks: "Pre-submission checks", docxChkHdr: ["Check", "Result", "Ref."],
+      docxFramework: "Structure: ", docxChecks: "Pre-submission checks", docxChkHdr: ["Check", "Result", "Ref."],
       matrix: "Compliance matrix", hdr: ["Ref.", "Requirement (tender extract)", "Status", "Sourced answer"],
       checklist: "Documents to submit (compliance forms, bid submission form, pricing schedule…)", ckHdr: ["", "Document", "Status"],
       sources: "Appendix — cited sources", srcFrom: "Source: ",
@@ -35,7 +35,7 @@
       pageOf: ["Page ", " / "], docTitle: "Technical proposal (draft)",
       genFirst: "Generate the proposal first.", printTitle: "Technical proposal — draft for review",
       printWarn: "HUMAN REVIEW REQUIRED — fictional sample.", loadFail: "Demo data failed to load: ",
-      dceExtract: "Fictional tender extract", kbExtract: "Extract from your (fictional) documents", close: "Close",
+      tenderExtract: "Fictional tender extract", kbExtract: "Extract from your (fictional) documents", close: "Close",
       reqsFrom: "Requirements found in this document", openSrc: "View extract",
       vStats: (r, d, f, c) => [[r, "requirements found, each with its clause and page"], [d, "documents listed: compliance and bid forms, pricing schedule, certificates"], [c, "consistency checks before submission"], ["Word", "proposal in the buyer's template, ready to review"]],
       title: (n) => `${n} public tenders — AI demo · Nyyo Automation`,
@@ -86,7 +86,7 @@
     if (!d) return "";
     return `<button type="button" class="cite cite-btn" data-kb="${esc(id)}" title="${esc(T.openSrc)}"><i data-lucide="file-text"></i>${esc(d.source)} · ${T.page}${d.page}</button>`;
   }
-  function dceCite(r) {
+  function tenderCite(r) {
     return `<button type="button" class="cite cite-btn cite-tender" data-req="${esc(r.id)}" title="${esc(T.openSrc)}"><i data-lucide="file-search"></i>${esc(r.source)} · ${T.page}${r.page} · ${esc(r.art)}</button>`;
   }
 
@@ -135,8 +135,8 @@
     $("#heroSector").textContent = d.name;
     $("#heroGrad").textContent = d.h1;
     $("#heroLead").textContent = d.lead;
-    $("#heroPieces").textContent = d.pieces;
-    $$(".js-pieces").forEach((el) => (el.textContent = d.pieces));
+    $("#heroDocuments").textContent = d.documents;
+    $$(".js-documents").forEach((el) => (el.textContent = d.documents));
     $("#kbCompany").textContent = d.company;
     $("#kbDesc").textContent = d.company_desc;
     $("#kbQ").placeholder = "Try: " + d.chips.slice(0, 3).join(", ") + "…";
@@ -223,16 +223,16 @@
     $("#tenderTitle").innerHTML = `<strong>${esc(m.title)}</strong> · ${esc(m.buyer)} · <span class="mono">${esc(m.tender_id)}</span>`;
     $("#tenderMeta").innerHTML = [m.procedure, m.cpv, m.term].map((x) => `<span class="pill">${esc(x)}</span>`).join(" ");
     $("#tenderFiles").innerHTML = m.source_files.map((f) => `<button type="button" class="tender-file" data-file="${esc(f.name)}"><i data-lucide="${/\.xlsx$/.test(f.name) ? "sheet" : /\.docx$/.test(f.name) ? "file-type" : "file-text"}"></i><span>${esc(f.name)}</span><small>${esc(f.type)} · ${f.pages} ${T.page}</small></button>`).join("");
-    $("#cadreName").textContent = d.cadre.name;
-    $("#cadreNote").textContent = d.cadre.note;
-    $("#cadreList").innerHTML = d.scoring.map((c) => `<li><span class="mono">${c.id}</span> ${esc(d.sections[c.id].title)} <span class="w">${c.weight}%</span></li>`).join("");
+    $("#frameworkName").textContent = d.framework.name;
+    $("#frameworkNote").textContent = d.framework.note;
+    $("#frameworkList").innerHTML = d.scoring.map((c) => `<li><span class="mono">${c.id}</span> ${esc(d.sections[c.id].title)} <span class="w">${c.weight}%</span></li>`).join("");
     const covered = d.requirements.filter((r) => r.kb || r.check).length;
     const toCheck = d.requirements.filter((r) => !r.kb && !r.check).map((r) => r.id);
     $("#gonogo").innerHTML = `<h3><i data-lucide="compass"></i> ${T.gonogoTitle}</h3><p>${T.gonogo(covered, d.requirements.length, toCheck)}</p>`;
     $("#criteria").innerHTML = d.scoring.map((c) => `<div class="crit" data-id="${c.id}"><div class="w">${c.weight}%</div><div class="name">${esc(c.id)} · ${esc(c.name)}</div><p class="desc">${esc(c.description)}</p></div>`).join("");
     $("#deadlines tbody").innerHTML = d.deadlines.map((x) => `<tr><td>${esc(x.label)}</td><td class="mono">${esc([x.date, x.time, x.tz].filter(Boolean).join(" "))}${x.note ? ` <span class="pill">${esc(x.note)}</span>` : ""}</td></tr>`).join("");
     $("#docs tbody").innerHTML = d.required_documents.map((x) => `<tr><td>${esc(x.name)}${x.kind === "form" ? ` <span class="pill form-pill">${T.formTag}</span>` : ""}<div class="doc-note">${esc(x.notes || "")}</div></td><td>${x.alt ? `<span class="pill">${T.alt}</span>` : x.mandatory ? `<span class="pill warn">${T.required}</span>` : `<span class="pill">${T.optional}</span>`}</td></tr>`).join("");
-    $("#reqs").innerHTML = d.requirements.map((r) => `<div class="req-item"><span class="id">${esc(r.id)}</span><div><strong>${esc(r.category)}</strong> — ${esc(r.text)}</div><span class="src">${dceCite(r)}</span></div>`).join("");
+    $("#reqs").innerHTML = d.requirements.map((r) => `<div class="req-item"><span class="id">${esc(r.id)}</span><div><strong>${esc(r.category)}</strong> — ${esc(r.text)}</div><span class="src">${tenderCite(r)}</span></div>`).join("");
     $("#alerts").innerHTML = d.alerts.map((a) => `<div class="alert-row ${a.level === "warn" ? "warn" : "info"}"><i data-lucide="${a.level === "warn" ? "triangle-alert" : "info"}"></i><span>${esc(a.text)}</span></div>`).join("");
   }
 
@@ -311,7 +311,7 @@
     panel.scrollIntoView({ behavior: "smooth", block: "start" });
     await sleep(350);
     out.innerHTML = "";
-    $("#packCadre").textContent = st.d.cadre.name + " — " + st.d.cadre.note;
+    $("#packFramework").textContent = st.d.framework.name + " — " + st.d.framework.note;
     for (const c of st.d.scoring) {
       if (token !== st.run) return;
       const el = document.createElement("div");
@@ -333,7 +333,7 @@
     if (token !== st.run) return;
     $("#matrix tbody").innerHTML = st.d.requirements.map((r) => {
       const s = reqStatus(r, checks);
-      return `<tr><td class="mono">${esc(r.id)}</td><td>${esc(r.text)}<div class="mt4">${dceCite(r)}</div></td><td><span class="pill ${s.cls}">${esc(s.label)}</span>${s.note ? `<div class="doc-note">${esc(s.note)}</div>` : ""}</td><td>${r.kb ? kbCite(r.kb) : "—"}</td></tr>`;
+      return `<tr><td class="mono">${esc(r.id)}</td><td>${esc(r.text)}<div class="mt4">${tenderCite(r)}</div></td><td><span class="pill ${s.cls}">${esc(s.label)}</span>${s.note ? `<div class="doc-note">${esc(s.note)}</div>` : ""}</td><td>${r.kb ? kbCite(r.kb) : "—"}</td></tr>`;
     }).join("");
     $("#packChecks").innerHTML = $("#checks").innerHTML;
     $("#checklist tbody").innerHTML = checklistRows(st.form).map((x) => `<tr><td>${esc(x.name)}${x.form ? ` <span class="pill form-pill">${T.formTag}</span>` : ""}</td><td><span class="pill ${x.cls}">${esc(x.note)}</span></td></tr>`).join("");
@@ -369,7 +369,7 @@
     const r = st.d.requirements.find((x) => x.id === id);
     if (!r) return;
     const same = st.d.requirements.filter((x) => x.source === r.source && x.id !== r.id);
-    openSource(`<p class="src-kicker">${T.dceExtract}</p><h3>${esc(r.source)} · ${T.page}${r.page} · ${esc(r.art)}</h3>
+    openSource(`<p class="src-kicker">${T.tenderExtract}</p><h3>${esc(r.source)} · ${T.page}${r.page} · ${esc(r.art)}</h3>
       <blockquote class="src-quote"><span class="mono">${esc(r.art)}</span> ${esc(r.text)}</blockquote>
       <p class="doc-note">${esc(st.d.meta.title)} — ${esc(st.d.meta.buyer)}</p>
       ${r.kb ? `<p class="mt8">${T.mapped} : ${kbCite(r.kb)}</p>` : ""}
@@ -378,7 +378,7 @@
   function showFile(name) {
     const rs = st.d.requirements.filter((x) => x.source === name).sort((a, b) => a.page - b.page);
     const f = st.d.meta.source_files.find((x) => x.name === name);
-    openSource(`<p class="src-kicker">${T.dceExtract}</p><h3>${esc(name)}${f ? ` · ${esc(f.type)} · ${f.pages} ${T.page}` : ""}</h3>
+    openSource(`<p class="src-kicker">${T.tenderExtract}</p><h3>${esc(name)}${f ? ` · ${esc(f.type)} · ${f.pages} ${T.page}` : ""}</h3>
       ${rs.length ? rs.map((r) => `<blockquote class="src-quote"><span class="mono">${T.page}${r.page} · ${esc(r.art)}</span> ${esc(r.text)}</blockquote>`).join("") : `<p class="muted-p">Pricing file or appendix: no written requirement extracted; prices stay entered by you.</p>`}`);
   }
   function showKb(id) {
@@ -410,7 +410,7 @@
       new Paragraph({ spacing: { after: 200 }, shading: { type: ShadingType.CLEAR, color: "auto", fill: "FFF4D6" }, children: [new TextRun({ text: T.docxWarn, bold: true, color: "8A4B00", size: 20 })] }),
       table([2600, 6400], null, [[d.meta.buyer], [d.meta.tender_id], [d.meta.procedure], [d.meta.term],
         [dl ? [dl.date, dl.time, dl.tz].filter(Boolean).join(" ") : "—"], [d.name], [d.company]].map((v, i) => [{ t: T.docxInfo[i], bold: true, fill: "EEF2F8" }, v[0]])),
-      new Paragraph({ spacing: { before: 200, after: 200 }, children: [new TextRun({ text: T.docxCadre, bold: true }), new TextRun(d.cadre.name + " — " + d.cadre.note)] }),
+      new Paragraph({ spacing: { before: 200, after: 200 }, children: [new TextRun({ text: T.docxFramework, bold: true }), new TextRun(d.framework.name + " — " + d.framework.note)] }),
     ];
     for (const c of d.scoring) {
       children.push(new Paragraph({ text: `${d.sections[c.id].title} (${c.id} · ${c.weight} %)`, heading: HeadingLevel.HEADING_1, spacing: { before: 240, after: 120 } }));

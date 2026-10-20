@@ -54,7 +54,7 @@
         <div class="hero-meta">
           <span>Pricing: <strong>On quote</strong></span>
           <span><strong>Remote · Worldwide</strong></span>
-          <span><strong id="heroPieces">ITT · contract terms · specification · pricing schedule</strong></span>
+          <span><strong id="heroDocuments">ITT · contract terms · specification · pricing schedule</strong></span>
         </div>
         <div class="disclaimer-banner" role="note">
           <i data-lucide="shield-alert"></i>
@@ -87,7 +87,7 @@
     </section>
 
     <section class="steps" aria-label="How it works" id="how">
-      <div class="step" data-step="1"><span class="n">1</span><h3>Load the tender pack</h3><p class="js-pieces">ITT, contract terms, specification, pricing schedule</p></div>
+      <div class="step" data-step="1"><span class="n">1</span><h3>Load the tender pack</h3><p class="js-documents">ITT, contract terms, specification, pricing schedule</p></div>
       <div class="step" data-step="2"><span class="n">2</span><h3>Search past proposals</h3><p>In-browser search, source and page cited.</p></div>
       <div class="step" data-step="3"><span class="n">3</span><h3>Enter and check</h3><p>Price, team, commitments — live consistency checks.</p></div>
       <div class="step" data-step="4"><span class="n">4</span><h3>Export the pack</h3><p>Proposal in the imposed template + matrix + documents (compliance forms, pricing schedule…) → Word / PDF.</p></div>
@@ -128,10 +128,10 @@
       <h3 class="h3s">Tender documents <small>tap a document to see the extracts</small></h3>
       <div class="tender-files" id="tenderFiles"></div>
       <div class="two-col">
-        <div class="cadre-box">
-          <h3><i data-lucide="layout-list"></i> <span id="cadreName"></span></h3>
-          <p id="cadreNote" class="doc-note"></p>
-          <ol id="cadreList"></ol>
+        <div class="framework-box">
+          <h3><i data-lucide="layout-list"></i> <span id="frameworkName"></span></h3>
+          <p id="frameworkNote" class="doc-note"></p>
+          <ol id="frameworkList"></ol>
         </div>
         <div class="gonogo" id="gonogo"></div>
       </div>
@@ -190,7 +190,7 @@
         <div>Draft only. Check every statement and every source before submitting a real bid.</div>
       </div>
       <p class="pill stale hidden" id="staleNote">Your inputs changed — regenerate the proposal.</p>
-      <p class="doc-note" id="packCadre"></p>
+      <p class="doc-note" id="packFramework"></p>
       <div class="proposal-out" id="proposalOut"></div>
       <h3 class="h3s">Pre-submission checks</h3>
       <ul class="checks" id="packChecks"></ul>

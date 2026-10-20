@@ -55,8 +55,8 @@
   "Data_Protection_Annex.pdf",
   "Rate_Card.xlsx"
  ],
- "pieces": "ITT · contract terms · specification · data-protection annex · rate card · pricing schedule",
- "cadre": {
+ "documents": "ITT · contract terms · specification · data-protection annex · rate card · pricing schedule",
+ "framework": {
   "name": "Imposed proposal template (ITT appendix 1)",
   "note": "5 sections kept in the buyer's order."
  },
@@ -192,8 +192,8 @@
    "page": 2,
    "art": "Art. 2",
    "criterion": "C2",
-   "kb": "kb-hebergement",
-   "check": "eu"
+   "kb": "kb-hosting",
+   "check": "region"
   },
   {
    "id": "E06",
@@ -258,7 +258,7 @@
    "page": 33,
    "art": "Art. 12",
    "criterion": "C4",
-   "kb": "kb-reversibilite",
+   "kb": "kb-reversibility",
    "check": null
   },
   {
@@ -449,7 +449,7 @@
    "text": "Service catalogue, P1 to P4 priorities, change management with a weekly board, knowledge base updated with every resolved ticket."
   },
   {
-   "id": "kb-hebergement",
+   "id": "kb-hosting",
    "title": "Sheet — Data and tool hosting (region of your choice)",
    "source": "security/hosting_data_region.pdf",
    "page": 1,
@@ -523,7 +523,7 @@
    "text": "Weeks 1–3: joint inventory and documentation handover. Weeks 4–6: shadowing the incumbent team. Weeks 7–8: gradual cut-over and client sign-off."
   },
   {
-   "id": "kb-reversibilite",
+   "id": "kb-reversibility",
    "title": "Template exit reversibility plan",
    "source": "projects/exit_plan.pdf",
    "page": 1,
@@ -597,7 +597,7 @@
     },
     {
      "text": "Exit reversibility: data and documentation returned in open formats (CSV, ODT).",
-     "cite": "kb-reversibilite"
+     "cite": "kb-reversibility"
     }
    ]
   },
@@ -665,7 +665,7 @@
     "step": 1
    },
    {
-    "id": "eu",
+    "id": "region",
     "label": "Data hosted in the buyer's chosen region?",
     "type": "select",
     "value": "yes",
@@ -695,10 +695,10 @@
    {
     "tpl": "Data and tools hosted in the buyer's chosen data region (EU or US); no transfer outside it.",
     "when": [
-     "eu",
+     "region",
      "yes"
     ],
-    "cite": "kb-hebergement"
+    "cite": "kb-hosting"
    }
   ],
   "C3": [
@@ -755,9 +755,9 @@
    "ko": "{transition} weeks — longer than the 2 months allowed."
   },
   {
-   "id": "eu",
+   "id": "region",
    "op": "eq",
-   "field": "eu",
+   "field": "region",
    "value": "yes",
    "label": "Data in the chosen region",
    "ref": "data-protection annex p.2",

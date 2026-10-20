@@ -1,5 +1,5 @@
 {
- "id": "securite",
+ "id": "security",
  "name": "Security",
  "icon": "shield",
  "h1": "guarding and fire safety, proposal ready to review",
@@ -55,8 +55,8 @@
   "Post_Orders.pdf",
   "Hourly_Rate_Card.xlsx"
  ],
- "pieces": "ITT · contract terms · specification · post orders · hourly rate card · pricing schedule",
- "cadre": {
+ "documents": "ITT · contract terms · specification · post orders · hourly rate card · pricing schedule",
+ "framework": {
   "name": "Imposed proposal template (ITT appendix 3)",
   "note": "5 sections kept in the buyer's order."
  },
@@ -159,7 +159,7 @@
    "page": 8,
    "art": "Art. 3.4",
    "criterion": "C1",
-   "kb": "kb-rondes",
+   "kb": "kb-patrols",
    "check": null
   },
   {
@@ -181,7 +181,7 @@
    "page": 7,
    "art": "Art. 6.1",
    "criterion": "C2",
-   "kb": "kb-autorisation",
+   "kb": "kb-authorisation",
    "check": null
   },
   {
@@ -203,7 +203,7 @@
    "page": 15,
    "art": "Art. 7.2",
    "criterion": "C3",
-   "kb": "kb-levee",
+   "kb": "kb-snag-clearance",
    "check": "delay"
   },
   {
@@ -214,7 +214,7 @@
    "page": 16,
    "art": "Art. 7.4",
    "criterion": "C3",
-   "kb": "kb-levee",
+   "kb": "kb-snag-clearance",
    "check": null
   },
   {
@@ -225,7 +225,7 @@
    "page": 8,
    "art": "Art. 6",
    "criterion": "C4",
-   "kb": "kb-reprise",
+   "kb": "kb-staff-transfer",
    "check": null
   },
   {
@@ -236,7 +236,7 @@
    "page": 10,
    "art": "Art. 7.1",
    "criterion": "C4",
-   "kb": "kb-continuite",
+   "kb": "kb-continuity",
    "check": null
   },
   {
@@ -247,7 +247,7 @@
    "page": 2,
    "art": "§ 1.3",
    "criterion": "C2",
-   "kb": "kb-doublure",
+   "kb": "kb-backup-staff",
    "check": null
   },
   {
@@ -258,7 +258,7 @@
    "page": 11,
    "art": "Art. 9",
    "criterion": "C3",
-   "kb": "kb-telesurv",
+   "kb": "kb-remote-monitoring",
    "check": null
   },
   {
@@ -425,7 +425,7 @@
    "text": "For Riverton Museum (fictional): reception-security post during opening hours, one level 1 fire-safety officer permanently at the fire-safety desk, bag checks at peak times, electronic log shared with the venue team."
   },
   {
-   "id": "kb-rondes",
+   "id": "kb-patrols",
    "title": "Procedure — Night patrols and electronic log",
    "source": "procedures/night_patrols.pdf",
    "page": 2,
@@ -450,7 +450,7 @@
    "text": "Register of 42 (fictional) officers with licence number, expiry date and automatic alert 90 days before expiry. Copy given to the client before each new posting."
   },
   {
-   "id": "kb-autorisation",
+   "id": "kb-authorisation",
    "title": "Security-company licence — company and directors",
    "source": "admin/security_company_licence.pdf",
    "page": 1,
@@ -486,7 +486,7 @@
    "text": "Karim Benali (fictional person): 10 years in public-venue security, level 2 fire-safety site manager for 6 years, leads up to 12 officers, runs evacuation drills."
   },
   {
-   "id": "kb-levee",
+   "id": "kb-snag-clearance",
    "title": "Flowchart — Alarm response and on-site verification",
    "source": "procedures/alarm_verification.pdf",
    "page": 1,
@@ -499,7 +499,7 @@
    "text": "Alarm received → call to site → mobile patrol dispatched → on-site verification → site secured → written report to the client within 24 h. Average arrival time in 2025: 18 minutes (fictional internal figure)."
   },
   {
-   "id": "kb-reprise",
+   "id": "kb-staff-transfer",
    "title": "Procedure — Staff transfer (TUPE-style transfer)",
    "source": "hr/staff_transfer_security.pdf",
    "page": 2,
@@ -511,7 +511,7 @@
    "text": "Steps: receive the outgoing contractor's list, brief the officers, one-to-one interview, licence check, contract amendment, seniority kept. Timeline aligned on the start date."
   },
   {
-   "id": "kb-continuite",
+   "id": "kb-continuity",
    "title": "Continuity plan — cover within 2 h",
    "source": "operations/continuity_plan.pdf",
    "page": 1,
@@ -523,7 +523,7 @@
    "text": "Pool of 8 officers trained on several sites' orders, 24/7 supervisory on-call. Internal target: replacement on post within 2 h."
   },
   {
-   "id": "kb-doublure",
+   "id": "kb-backup-staff",
    "title": "Sheet — Site-order induction (shadowing)",
    "source": "training/site_shadowing.pdf",
    "page": 1,
@@ -535,7 +535,7 @@
    "text": "Each new officer shadows a regular officer for at least 4 h, then answers a quiz on general and specific orders, signed off by the site manager."
   },
   {
-   "id": "kb-telesurv",
+   "id": "kb-remote-monitoring",
    "title": "Framework contract — Remote monitoring (declared subcontractor)",
    "source": "contracts/remote_monitoring.pdf",
    "page": 2,
@@ -566,7 +566,7 @@
     },
     {
      "text": "Night patrols every 2 h from 20:00 to 6:00, NFC tags and an electronic log the buyer can read.",
-     "cite": "kb-rondes"
+     "cite": "kb-patrols"
     }
    ]
   },
@@ -579,7 +579,7 @@
     },
     {
      "text": "Company operating authorisation and directors' approvals attached.",
-     "cite": "kb-autorisation"
+     "cite": "kb-authorisation"
     },
     {
      "text": "Level 1 fire-safety officers, level 2 team leader, refreshers scheduled.",
@@ -587,7 +587,7 @@
     },
     {
      "text": "At least 4 h shadowing on the site orders before any posting.",
-     "cite": "kb-doublure"
+     "cite": "kb-backup-staff"
     }
    ]
   },
@@ -596,15 +596,15 @@
    "bullets": [
     {
      "text": "Alarm response by mobile patrol, following our verification flowchart.",
-     "cite": "kb-levee"
+     "cite": "kb-snag-clearance"
     },
     {
      "text": "Written report to the buyer within 24 h of any incident.",
-     "cite": "kb-levee"
+     "cite": "kb-snag-clearance"
     },
     {
      "text": "Remote monitoring by our usual subcontractor, declared on the subcontractor form and subject to buyer approval.",
-     "cite": "kb-telesurv"
+     "cite": "kb-remote-monitoring"
     }
    ]
   },
@@ -613,11 +613,11 @@
    "bullets": [
     {
      "text": "Transfer of the 5 officers in appendix 4 under TUPE-style transfer rules: briefing, interview, licence check, amendment, seniority kept.",
-     "cite": "kb-reprise"
+     "cite": "kb-staff-transfer"
     },
     {
      "text": "Cover within 2 h thanks to a pool of 8 officers and 24/7 supervisory on-call.",
-     "cite": "kb-continuite"
+     "cite": "kb-continuity"
     }
    ]
   },
@@ -726,7 +726,7 @@
   "C3": [
    {
     "tpl": "Committed alarm response time: {delay} minutes (specification maximum: 30).",
-    "cite": "kb-levee"
+    "cite": "kb-snag-clearance"
    }
   ],
   "C5": [

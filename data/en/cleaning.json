@@ -1,5 +1,5 @@
 {
- "id": "proprete",
+ "id": "cleaning",
  "name": "Cleaning",
  "icon": "sparkles",
  "h1": "proposal in the buyer's template, ready to review",
@@ -50,8 +50,8 @@
   "Response_Template.docx",
   "Pricing_Schedule.xlsx"
  ],
- "pieces": "ITT · contract terms · specification · response template · pricing schedule",
- "cadre": {
+ "documents": "ITT · contract terms · specification · response template · pricing schedule",
+ "framework": {
   "name": "Imposed proposal template (ITT appendix 2)",
   "note": "5 sections kept in the buyer's order — nothing is reshuffled."
  },
@@ -171,7 +171,7 @@
    "page": 14,
    "art": "Art. 7.3",
    "criterion": "C2",
-   "kb": "kb-creche",
+   "kb": "kb-nursery",
    "check": null
   },
   {
@@ -182,7 +182,7 @@
    "page": 18,
    "art": "Art. 9",
    "criterion": "C2",
-   "kb": "kb-vitrerie",
+   "kb": "kb-glazing",
    "check": null
   },
   {
@@ -193,7 +193,7 @@
    "page": 6,
    "art": "Art. 3.4",
    "criterion": "C1",
-   "kb": "kb-reprise",
+   "kb": "kb-staff-transfer",
    "check": null
   },
   {
@@ -215,7 +215,7 @@
    "page": 9,
    "art": "Art. 5.2",
    "criterion": "C1",
-   "kb": "kb-remplacement",
+   "kb": "kb-replacement",
    "check": null
   },
   {
@@ -226,7 +226,7 @@
    "page": 24,
    "art": "Art. 12.1",
    "criterion": "C3",
-   "kb": "kb-qualite",
+   "kb": "kb-quality",
    "check": null
   },
   {
@@ -248,7 +248,7 @@
    "page": 29,
    "art": "Art. 14",
    "criterion": "C4",
-   "kb": "kb-dechets",
+   "kb": "kb-waste",
    "check": null
   },
   {
@@ -259,7 +259,7 @@
    "page": 15,
    "art": "Art. 11",
    "criterion": "C4",
-   "kb": "kb-insertion",
+   "kb": "kb-social-inclusion",
    "check": null
   },
   {
@@ -418,7 +418,7 @@
    "text": "Set-up for Riverton City Hall (fictional): work from 6:00 to 8:30 and after 18:00, never with the public present. Offices three times a week, washrooms and touch points daily. 9 cleaners, 4,100 hours a year, supervisor on site in the morning."
   },
   {
-   "id": "kb-creche",
+   "id": "kb-nursery",
    "title": "Protocol — Early-childhood settings",
    "source": "procedures/early_years_protocol.pdf",
    "page": 2,
@@ -431,7 +431,7 @@
    "text": "Fragrance- and allergen-free products approved with the nursery management. Weekly steam disinfection of toys and mats, no chemicals. Staff trained on the early-childhood protocol before assignment. Cleaning after the children leave."
   },
   {
-   "id": "kb-vitrerie",
+   "id": "kb-glazing",
    "title": "Method statement — Windows and work at height",
    "source": "procedures/windows_work_at_height.pdf",
    "page": 1,
@@ -444,7 +444,7 @@
    "text": "Pure-water pole up to 12 m from the ground. Above that, a lift operated by our usual subcontractor, declared on the subcontractor form. Area cordoned off and prevention plan agreed with the buyer before each job."
   },
   {
-   "id": "kb-reprise",
+   "id": "kb-staff-transfer",
    "title": "Procedure — Staff transfer (TUPE-style transfer)",
    "source": "hr/staff_transfer_procedure.pdf",
    "page": 3,
@@ -468,7 +468,7 @@
    "text": "Nadia Ferreira (fictional person): 12 years in cleaning, 7 as team lead on public sites. Manages up to 15 cleaners. Reachable 6:00–19:00. Trained in early-childhood protocols and quality control."
   },
   {
-   "id": "kb-remplacement",
+   "id": "kb-replacement",
    "title": "Organisation — Cover pool",
    "source": "operations/cover_pool.pdf",
    "page": 2,
@@ -480,7 +480,7 @@
    "text": "Pool of 6 relief cleaners in the Northgate area. Cover from the first day of absence; replacement on site on average 2 h after the alert in 2025 (fictional internal figure)."
   },
   {
-   "id": "kb-qualite",
+   "id": "kb-quality",
    "title": "Quality-control plan — grids and self-checks",
    "source": "quality/inspection_plan.pdf",
    "page": 5,
@@ -506,7 +506,7 @@
    "text": "86% of products used in 2025 carry a recognised eco-label. Dilution stations for exact dosing, washable microfibre. Data sheets and safety data sheets kept up to date for each product."
   },
   {
-   "id": "kb-dechets",
+   "id": "kb-waste",
    "title": "Instructions — Waste sorting and bins",
    "source": "procedures/waste_sorting.pdf",
    "page": 1,
@@ -518,7 +518,7 @@
    "text": "Bins emptied daily, waste sorted by stream (paper, packaging, general waste), colour-coded bags. Each site's rules are posted in the cleaning room."
   },
   {
-   "id": "kb-insertion",
+   "id": "kb-social-inclusion",
    "title": "Partnership — Employment inclusion",
    "source": "csr/inclusion_partnership.pdf",
    "page": 1,
@@ -560,11 +560,11 @@
     },
     {
      "text": "Transfer of the 14 staff in appendix 5 under our procedure: briefing, one-to-one interview, amendment, seniority kept, from D-30 to D0.",
-     "cite": "kb-reprise"
+     "cite": "kb-staff-transfer"
     },
     {
      "text": "Cover from the first day of absence thanks to a pool of 6 relief cleaners.",
-     "cite": "kb-remplacement"
+     "cite": "kb-replacement"
     }
    ]
   },
@@ -577,11 +577,11 @@
     },
     {
      "text": "“Little Swallows” nursery: early-childhood protocol, fragrance- and allergen-free products, weekly steam disinfection of toys.",
-     "cite": "kb-creche"
+     "cite": "kb-nursery"
     },
     {
      "text": "Windows twice a year: pure-water pole up to 12 m, lift above that through our usual subcontractor declared on the subcontractor form.",
-     "cite": "kb-vitrerie"
+     "cite": "kb-glazing"
     }
    ]
   },
@@ -590,11 +590,11 @@
    "bullets": [
     {
      "text": "Zone grid scored 0 to 3: weekly self-check, monthly area-manager visit, quarterly joint inspection.",
-     "cite": "kb-qualite"
+     "cite": "kb-quality"
     },
     {
      "text": "Every deviation fixed within 24 working hours and logged in the tracking app, visible to the buyer.",
-     "cite": "kb-qualite"
+     "cite": "kb-quality"
     }
    ]
   },
@@ -607,11 +607,11 @@
     },
     {
      "text": "Waste sorted according to each site's rules, bins emptied daily.",
-     "cite": "kb-dechets"
+     "cite": "kb-waste"
     },
     {
      "text": "Inclusion clause: at least 5% of hours, with partner association Stepping Stone Works (fictional).",
-     "cite": "kb-insertion"
+     "cite": "kb-social-inclusion"
     }
    ]
   },

@@ -1,5 +1,5 @@
 {
- "id": "formation",
+ "id": "training",
  "name": "Training",
  "icon": "graduation-cap",
  "h1": "programmes and trainers, proposal ready to review",
@@ -50,8 +50,8 @@
   "Response_Template.docx",
   "Rate_Card.xlsx"
  ],
- "pieces": "ITT · contract terms · specification · response template · rate card · pricing schedule",
- "cadre": {
+ "documents": "ITT · contract terms · specification · response template · rate card · pricing schedule",
+ "framework": {
   "name": "Imposed proposal template (ITT appendix 2)",
   "note": "5 sections kept in order; one proposal per lot."
  },
@@ -154,7 +154,7 @@
    "page": 8,
    "art": "Art. 4.1",
    "criterion": "C4",
-   "kb": "kb-logistique",
+   "kb": "kb-logistics",
    "check": "group"
   },
   {
@@ -198,7 +198,7 @@
    "page": 14,
    "art": "Art. 7",
    "criterion": "C4",
-   "kb": "kb-handicap",
+   "kb": "kb-disability",
    "check": null
   },
   {
@@ -209,7 +209,7 @@
    "page": 16,
    "art": "Art. 8",
    "criterion": "C4",
-   "kb": "kb-logistique",
+   "kb": "kb-logistics",
    "check": "setup"
   },
   {
@@ -480,7 +480,7 @@
    "text": "Sophie Arden (fictional person): 14 years' experience, 8 with public bodies, in front-line management and psychosocial-risk prevention."
   },
   {
-   "id": "kb-handicap",
+   "id": "kb-disability",
    "title": "Commitment — Disability contact and adapted materials",
    "source": "accessibility/disability_contact.pdf",
    "page": 1,
@@ -492,7 +492,7 @@
    "text": "Disability contact reachable before each session; materials (large print, audio), pace and arrangements adapted at the trainee's or buyer's request."
   },
   {
-   "id": "kb-logistique",
+   "id": "kb-logistics",
    "title": "Organisation — Setting up in-house and remote sessions",
    "source": "operations/session_setup.pdf",
    "page": 2,
@@ -601,11 +601,11 @@
    "bullets": [
     {
      "text": "In-house sessions at your premises or in virtual classes, equipment lent if needed.",
-     "cite": "kb-logistique"
+     "cite": "kb-logistics"
     },
     {
      "text": "Named disability contact; materials and arrangements adapted on request.",
-     "cite": "kb-handicap"
+     "cite": "kb-disability"
     }
    ]
   },
@@ -690,7 +690,7 @@
   "C4": [
    {
     "tpl": "Groups of {group} trainees maximum in person and {group_remote} in virtual classes; set-up within {setup} weeks of the purchase order.",
-    "cite": "kb-logistique"
+    "cite": "kb-logistics"
    }
   ],
   "C5": [
